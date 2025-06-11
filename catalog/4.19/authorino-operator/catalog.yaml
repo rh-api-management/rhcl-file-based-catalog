@@ -1,0 +1,3033 @@
+---
+defaultChannel: stable
+icon:
+  base64data: iVBORw0KGgoAAAANSUhEUgAAAXwAAAF8CAYAAADM5wDKAAAACXBIWXMAAG66AABuugHW3rEXAAAgAElEQVR4nO3df2zT173/8TcQl8QE28OADMUksIkoIVncaFSDRjf5a5pa3ZJqf1Sr7ldk0v4out8J74+pWzWJIO12Q/snaJraPyYVdL9qtT+mhn7Vado/JVfQTmNqHSWAEq2QkAIWEGobE5valPuHE6AdFH/OOZ9f/jwfUjXpXo59VKkvH855n/dZcffuXQEANL6Vbk8AAOAMAh8AAoLAB4CAIPABICAIfAAICAIfAAKCwAeAgCDwASAgCHwACIgmtyfQqLq6uvpXrVr1nVAoNLBy5cpvNDc3d6xatapZRCQajcbcnh/gtnw+nxMRuXPnTrlcLk9/8cUXn1UqlfE7d+784+zZsyfdnl8jWkFrBX09PT3pVatWfb+lpeVbLS0tm1tbW1vcnhPgd8VisVQqlS7fvn17slKpjE9OTo66PSe/I/At6uzsbHviiSdeXr169fdbW1s7CHfAOcVisVQsFqdv3779l88///yNc+fOzbk9Jz8h8OvQ3d39YnNz8/5IJPI0AQ94R7FYLBUKhb+Xy+XXp6am/uj2fLyOwH+E7u7uF8Ph8M9jsVh3c3MzZx2Ax5XL5Woul5taXFz8DeH/cAT+A7q6uvrD4fCv1q1b9wwhD/hXuVyu3rhx49Ti4uIvOQC+j8AXkVQq9YdoNPoDqmeAxpPP53P5fP5PmUzmx27PxW2BDfzOzs62NWvWHGM1DwTD8qr/1q1b+4J62Bu4wO/q6upvbW393fr163ubmppWuD0fAM6qVqt3r1+/PlEsFn8StO2ewAR+V1dXfzQaPbphw4Zvuj0XAN5w7dq1T/L5/HBQgr/hA39562bz5s0Dbs8FgDddvnx5PAhbPQ0d+H19fe8kEom9bN0AeJxqtXo3m80e/+ijj15wey52acjA7+npSW/atOm3Xj2MrVQqUigUHvr/W1hYcHg2gH3i8fhD/++RSERCoZDDs6lPuVyuXrly5WeN2MqhoQK/s7OzLR6P/23dunUJt+dSKBRkcXFRCoWC5PP5eyFfqVTcnhrgGaFQ6F74R6NRiUQiEg6HJRKJuD01uXHjRnZhYeG7jbTN0zCB7+b2TalUkuvXr98Ld1bpgL54PH7vR2D9+vXS0uJ8V5NG2+bxfeB3dna2bdy4MeP0palsNisLCwuSzWZlcXHRya8GAikcDksikZB4PC6JhLN/ic/n87mrV6+m/L7a93Xg9/b2/vrJJ598xYlVfaVSkWw2e+8fAO5KJBL3/nHiPKBard69dOnS4YmJiV/Y/mU28WXgd3Z2tq1du3YskUik7P6u5YCfn5+3+6sAKEomk/fC327ZbDZz8+bNIT+u9n0X+F1dXf2JROKvdrYprlQqcuHCBZmfn2e7BvCRcDgsyWRStm3bZuuqv1gslrLZ7Pf8dmHLV4Fv9xZOqVSS6elpVvNAA0gmk9LR0WHbYa8ft3h8E/h9fX3vbNmyZciOz15YWJDz58+zNw80oEQiIdu3b3/knQBdn3766Zhfqnh8Efi7d+/+px09cEqlknz88ceUUQIBEI/H5amnnrJlxX/t2rVPPvzww28Z/2DDPB34dpVcVioVOXPmDFs3QAAlk0nZuXOn8T1+P5RuejbwOzs72zZt2nTO9OHszMyMnD9/nhuvQICFQiHZvn277Nixw+jnFovF0pUrVzq9GvqeDPynn376262trX8zGfYLCwsyNTX1yB42AIInEolId3e30f19L4e+5wK/u7v7xa1bt75tqhKnUqncW9UDwMMsr/ZNbfNUq9W7Fy9e/KHXHlP3VOCbDvtCoSCnT5+mlh7AY4XDYdm1a5exxm1eDH3PBP6WLVu+/e1vfztjKuxnZmZkenraxEcBCJCOjg5je/vVavXuhQsXtnlle8cTgW/ygLZSqcjp06cptQSgLB6Py65du4xs8XhpT9/1wDcZ9oVCQT744AMqcABoC4VCsmfPHiNbPF4J/ZVufrmIyMaNGzMmwn5+fl7Gx8cJewBGVCoVGR8fN3Jfp7W1tWXjxo0ZA9PS4mrg7969+58mLlXNzMxIJuP6v0sADSiTycjMzIz250Sj0dju3bv/aWBKylwL/L6+vndMtEvIZDIczgKw1fT0tJFF5YYNG77Z19f3joEpKXEl8Ht7e3+t2witUqlIJpOhPQIAR8zPz0smk9HeNt6yZctQb2/vrw1NyxLHD227urr629vb/0en/LJSqcgHH3zArVkAjotEIrJnzx6tCp5qtXp3dnb235zup+/oCr+zs7MtkUj8lbAH4FcmqgGbmppWJBKJv3Z2drYZnNpjORr4a9euHdOpyCHsAXiBidBvbW1tWbt27ZjBaT2WY4Hf29v7a903aM+cOUPYA/CEQqEgZ86c0fqMRCKRcnI/35E9/M7OzrZt27Zd0NnK4YAWgBclk0lJpdTXsk62X3Bkhb9x40atHjkzMzOEPQBPmp+f16rTb2pqWuHUpSzbA7+vr+8dnctV8/Pz1NkD8LTp6WmtRWk0Go05UZ9va+AvVeXsVR1fKBS4QQvAFzKZjNYZYyKR2Gt31Y6tgR+Px/+mupWzXJEDAH6hU7nT1NS0Ih6P/83wlL7EtsDv6elJr1u3LqE6/vTp0zRCA+Ary+3ZVa1bty7R09OTNjilL7Et8Ddt2vRb1bEzMzP0swfgSwsLC1qHuDrZ+Ti2BH5fX987zc3NTSpjC4UCh7QAfG16elp5P7+5ubnJrgNc44Gvc1Cr+9chAPAKnW1puw5wjQf+mjVrjqke1M7MzPDgOICGsLi4qLy109TUtGLNmjXHDE/JbOB3dXX1b968eUBl7MLCgpw/f97kdADAVefPn1c+j9y8efNAV1dXv8n5GA38aDR6VHXs1NSUwZkAgDfoZJtOpj6MscDv6urqV33BamZmhqZoABpSoVBQ3trZsGHDN02u8o0Ffmtr6+9UxlUqFbZyADS08+fPKx/gqmbrwxgJ/M7Ozrb169f3qow9c+YMF6wANLRKpaLcSnn9+vW9pip2jAS+amVOqVSiCyaAQJifn5dSqWR5nMmKHSOBv27dumdUxn388ccmvh4AfEE181Qz9qu0Az+VSv1B5VbtwsIC7RMABIpq7jU3NzelUqk/6H6/duBHo9EfqIzjoBZAEKlmn2rWPkgr8Lu6uvpVHjcplUqSzWZ1vhoAfCmbzSrt5Uej0ZhuiaZW4IfD4V+pjKM5GoAgU81A1cxdphX4KgcJlUqFyhwAgTY/P69Ujq57eKsc+N3d3S+qHNZeuHBB9SsBoGGoZGFzc3NTd3f3i6rfqRz44XD45yrjWN0DgHoWqmaviEbgx2Kxbqtjstks7Y8BQGrtk1WKV1Syd5lS4Ktu51CZAwD3qWSizraOUuA3NzfvtzqGw1oA+DLVw1uVDBZRDPxIJPK01TGs7gHgX6lko0oGiygEfmdnZ1tra2uL1XEEPgD8K5VsbG1tbVHpoGk58J944omXrY4RIfAB4GFUs1Eliy0H/urVq79vdQxhDwCPppKRKllsOfBbW1s7rI6hKyYAPJpKRqpksUrgs38PAAap7uNbHWMp8Ht6etJWv6BUKnHZCgC+xuLiolIHTauZbCnwW1paLO8ZXb9+3eoQAAgclawMhUIDVv68pcBftWrVt6xNR6RQKFgdAgCBo5KVq1ev7rHy562u8Ddbm45IPp+3OgQAAkclK61msqXAVzkkoEIHAB5PsVLHUibXHfgqT2uxnQMA9VPJTCvZXHfgr1q16jtWJ0J1DgDUTyUzrWRz3YFv9TRYhBU+AFihkplWsrnuwF+5cuU3rE6EA1sAqJ9KZlrJ5roDv7m52fI1XpU+zwAQVIq98evOZit7+M1WJ8KWDgDUTyUzrWSz8pu29WCFDwD1szsz6w78aDQas/LBhD0AWGc1O61ks20rfLZzAMA6O7PT1i0dAIB3EPgAEBAEPgAEBIEPAAFRV+A///zz7VY/mCodAHDGihUr2uv5c3UF/rvvvjtrdQJU6QCAdSrtFe7evTtbz59jSwcAPKRardr22QQ+AAQEgQ8AAUHgA0BAEPgAEBAEPgAEBIEPAAFB4ANAQBD4ABAQBD4ABASBDwABQeADQEAQ+AAQEAQ+AAQEgQ8AAUHgA0BAEPgAEBAEPgAEBIEPAAFB4ANAQBD4ABAQBD4ABEST2xOAnlgsJqlUyu1paDtx4oSr398jIlFXZ+B9kyKSd3sS0ELg+1QsFpPR0VHZt2+f21MxYm5uTkZGRuTo0aOOfu9zIvKaiCQd/Vb/eltEXhWC36/Y0vGhWCwmJ06caJiwFxFpa2uTN99809HAf0VE/lsIeyt+KCL/X/jbkF8R+D40NjYmvb29bk/DFvv27ZOhoSHbv+c5qQU+rOsWkf/n9iSghMD3maGhIRkYGHB7GrYaHR21/Ttes/0bGtszUvvRhL8Q+D6yvG/f6Nra2mRwcNC2z39F2MYxgR9N/yHwfSSdTktbW5vb0/C1qIjsd3sSDSIpbIv5DYHvE+3t7ZJOp92ehu+9JiIRtyfRQPaLyFa3J4G6Efg+MTIyItEotRE6+qVWZQJzIsIq308IfB8YHBxsqBLMx5mbm7PlIhbBZI8fSu3HFN5H4PvAyMiI21NwlB1bVy9JrbIE9uDH1B8IfI8bHh5u+DLMBx07dkzGxsaMfmZUCCS7PSO1H1V4G4HvYUEpwxSpbeO88MILMjw8bPyzXxbKMJ3wmnAD1+vopeNh6XRa+aD2Rz/6kczOzpqdkI3sap62VdTLME+JyGGDc/GLHhH5L4VxEan9uAbx35lfEPge1d7eLgcPHlQaOz4+7ngTMq/SKcN8VWodIoPmpIg8K2pnHq9IrcHaRaMzgils6XiUzlaOHdsiftQvteBS8YYEM+yX/afGWG7geheB70GDg4Oyd+9epbFHjhzx1VaOnVSDpyBsS1yU2o+eimeFMk2vIvA9SHV1n8/nA1fC+SgvSa2ro4rDQr93kdq/h4LiWFb53kTge0w6nVZufTwyMiK5XM7wjPwnKuqBMy8irxuci5/lRf1vOt1CzyIvIvA9JBaLKa/QJyYmAlPC+TiviPpBrc7edSN6XUSmFMe+IpRpeg2B7yE6/XJorFazVWqlgSpOSa1CBV/2quI4+ux4D4HvEe3t7XLgwAGlscePH3f9EXCv+L3GWFb3D3dSRP6sOPZloZumlxD4HqFTN8/qvqZf1PvlHBZqx7+O6ipfRO9HGGYR+B6g82zhoUOHKMNcohosBVEvQQyKi6J+gPuMUKbpFQS+B+iUYXJQW7Nf1PvlvCqUYdbjDVEv02SV7w0EvstGRkaUny1Mp9OUYYpeN8wpEXnL4FwaWV7Ut3Z4DtEbCHwXxWIx5f13+uXcp9svB/V7S2rVTCr2C2WabiPwXTQ6OqpchsmN2poeUX+28G2hDFOF6l5+RLiB6zYC3yWpVEr52cJjx45RhrmEfjnOOym1H0sVP5TajzTcQeC7hH45+p4T9TLM14UyTB302fEnAt8FOs8Wjo6OUoa5RKdfDmWYei6Kes+hZ6T2Yw3nEfgO0+mXMzc3x+p+ySuiXoZJN0wz3pDaj6cKnkN0B4HvsHQ6rVWGCf1nCynDNEO3TFO15xHUEfgOam9v1yrDHBsbMzwjf9LphkkZplnviV6ZJn12nEXgO4humPr6Ra8MM8jPFtqFbpr+QeA7ZHBwUKsMM5PJGJ6RP6kGREFY3dtlUvTKNOmz4xwC3yE6ZZis7mteEr0yTA5q7fOqUKbpBwS+A4aHh3m2UJPus4VcsrJXXtTLNLul9mMO+xH4NovFYsqr+7m5ObphLnlZOKj1usNCmabXEfg2S6fTyge1w8PDZifjU1tFfe/+lNQqSeAM1VfDIkKZphMIfBu1t7fLwYMHlcaOj4/TL2eJzh4vzxY666Sol2m+IpRp2o3At5HOdgyr+5p+EXlWcewbQr8cN+j8yHKAay8C3yaDg4Oyd+9epbFHjhyhX84SumH6z0VR71X0rFCmaScC3yaqj5PQDfO+/VKr4FBBvxx36XTT5DlE+xD4NtDtl0MZpt6zhfOiXiIIM3T77Kj2SsLXI/AN0+mGOTExwbOFS3T65XBQ6w1vSe3NYBWvCGWadiDwDaNfjr6tol6i92fh2UIvoc+OtxD4BqVSKTlw4IDS2OPHj1OGuURnD5dLVt5yUmo/wipeFso0TSPwDdIpw2R1X9Mv6v1yDgtlmF6k8yPMAa5ZBL4hQ0NDys8WHjp0iDLMJar/gReEZwu96qKol8jyHKJZBL4h9MvRp/Ns4atCGaaX6T6HCDMIfANGRkaUyzDphlkTFZ4tbGR5UV/lJ4UDXFMIfE2xWEzr2ULKMGteE/UyTG7U+sNbovccImWa+gh8TaOjo8plmNyorekRvWcLKcP0D9Uf54iwtWMCga9B99lCyjBr6JcTHCdF7znEHoNzCSICX4PqCp1+Ofc9J3rPFlKG6T86fXZY5esh8BUNDw8rl2GOjo5Shin6zxZShulPF0W919EzwnOIOgh8BTr9cubm5ljdL3lZKMMMKp3nEOmzo47AV6DbDRO1K/M6ZZg8W+h/Ot00eQ5RDYFvUXt7u1YZ5tjYmOEZ+ZNON0z65TSG90SvTJM+O9YR+BbplGGyuq/pF70yzEmDc7FbLBaTwcFBGRkZkcHBQWlvb3d7Sp6i002TA1zrCHwLdJ8tzGQyhmfkTzplmH5Z3cdiMTl69Kh89tln8v7778vBgwfl/ffflwsXLsiJEycI/iWTwnOITiLwLVDteUMZ5n0vifqzha+LPw5q29vbZXZ29pF3NAYGBiSTyUgqlXJ4Zt5EmaZzCPw6DQ8PS29vr9JY+uXU6JZh+uWS1djY2GO3/aLRqIyNjUksFnNoVt6l02enWyjTtILAr5NOGSbdMGteksZ/ttDKwqCtrU2Gh4ftnZBPvC56ZZqoD4Ffh8HBQeUyTP6Dvu9ZxXGnxB/9cmKxmOUf96GhIZtm4z+qP+pJYS+/XgS+jcbHx+mX8wDVFgp+Wd2rvGeselu7EZ0U9TJNLmLVh8CHp70h/uiX097ervyeMeAUAr8OqgeuAwMDMjg4aHYyPmZ19eanbpiq7xqMj4+bnYiP6bxn7IdFgRcQ+HXIZDIyNzenNJYHTu77s8U/f1j8UYY5ODiovDXDzev7VN8znhd/XcZzE4FfJ9Uqnba2Nm7YLnlL6q/EmBL1jopOU/1Rz+fzLAiW7Bf1Rnp++VugFxD4dTp69KhMTEwojR0ZGaHeWmqr9f+Qx1+yKSz9OT/QbaTH/YzagatqaeWU8J6xFQS+Baor9Wg0yk3bJZMi8m/y6P38t0WkV/yxJ6vTJpv3jO+jkZ5zCHwLTpw4IcePH1cae+DAAa7SL7koIv8uIikReV5E/u/S/26TWgmmH/btRXjP2IQeUW91/Gfxx/0MLyHwLUqn05LPq0USN26/7KLU/oN9a+l//RL0IiKpVIr3jA0IQiM9LyHwLZqdnVUO7oGBAW5WNgga6enjPWPnEfgKRkdHlcs0WeX739DQEO8ZG8B7xs4j8BXkcjmtMk1WeP6l0i9nGY307ntF9Mow/bT95yUEvqKjR48q35JMp9M8gOFTlGHq033PmDJMdQS+BtWVOmWa/sR7xmZQhukeAl/DiRMn5NixY0pj9+3bR58dn1HphrmM29Y1QXrP2IsIfE06ZZqs8v1jcHBQqwyT94xrVG/UUoZpBoGvKZfLaZVp8kCKP6j+OOfzeVb3S14SvTJMDmr1EfgGjIyMKJdp0mfH+4aHh7XKMDmo1euX46f3jL2OwDdEdRVHN01v0y3DZNuu5mVRL8NkK8ccAt+QsbEx5TLNgwcPUqbpUel0Wvmglu26mq2ivro/JSLvGZxL0BH4Bums1LmQ4z3t7e1y8OBBpbG8Z3yf6o1aEf+8Z+wXBL5BmUxGjhw5ojR27969lGl6jM6PMKv7mn4ReVZxrF/eM/YTAt+wkZERumk2gMHBQdm7d6/S2CNHjtAvZ4lON0wOas0j8A3T6bPT29vLytAj6Iap7yUR6VYcS78cexD4NtDtpkmZprvS6bT09vYqj6UMs1aGqdMN0y/vGfsNgW8T1ZU6fXbcpfNs4cTEBM8WLtHpl8NBrX0IfJvoPodImaY76Jejb6vwbKFXEfg20gkAVorOa29vlwMHDiiNPX78OGWYS36vMZZLVvYi8G00Ozsrhw4dUho7MDBAmabDdH5kWd3X9It6v5zDQhmm3Qh8m42OjiqXabLKd47Os4WHDh2iDHOJ6uq+IDxb6AQC32a5XI4+Oz7As4X69otevxzKMO1H4Dvg6NGjMjExoTSWbpr2GxkZUX62cGRkhDJM0euGOSU8W+gUAt8hqiv1aDTKCtJGsVhM69lCtt1qXhOeLfQDAt8hus8hplIpwzOCSG0rR7UMk/sSNT2i92whZZjOIfAdRJ8db0mlUlrPFlKGWUO/HP8g8B00Ozur9Rzi0NCQ4RkFG/1y9D0nes8WUobpLALfYbp9dmCG7rOFlGHq98uhDNN5BL7DdLpptrW1sbI0QKdfDs8W3qf7bCFlmM4j8F1w9OhR5ecQ0+k0fXY0pdNp5TJM7kXUbJVa3b0Kni10D4HvEp0yTVaY6trb27XKMMfGxgzPyJ90umFShukeAt8lmUxGq0yTPjtq6Iapr1/0yjAnDc4F1hD4Lkqn08plmqzyrRscHNQqw8xkMoZn5E+qN2oLwurebQS+i3K5nFaZJs8hWqNThsnqvuYl0SvD5KDWXQS+y0ZGRngO0QHDw8PKzxbSL6dGtwyTS1buI/A9QOcAl5Xn48ViMbphGvCy8Gyh3xH4HjA2NqZcpnnw4EHKNB8jnU4rH9SybVazVdT37k8J/XK8gsD3CJ1gYQX6aO3t7XLw4EGlsePj4/TLWaK6lSPC6t5LCHyPmJ2dlSNHjiiN3bt3L2Waj6DTvpjVfU2/iDyrOPYNoV+OlxD4HkI3TbMGBwd5ttAAumE2DgLfQ3T67PT29nKA+xWqq/t8Ps8P6JL9ItKtOPawUIbpNQS+x4yOjvIcogG6/XIow9R/tvB1g3OBGQS+B9FnR49ON8yJiQmeLVxCv5zGQ+B70IkTJ+T48eNKYw8cOBD4Mk365ejbKrW6exV/FsowvYrA9yid4AnyCjWVSsmBAweUxh4/fpwyzCW/1xjL6t67mtyeAB5udnZWDh06pFRDvtxnJ4hVJqpbOXb3y+m37ZPN6xH1fjmHhTJMLyPwPWx0dFT5luibb75pw4wal13PFj4ntbJG1Zeh/KQgPFvodWzpeFgul2NP2QF29cv5vYj8twQj7EV4ttAPCHyP03kOEfWxoxvmc6L+SIgfnRKRt9yeBB6LwPcBSi3tMz4+bssht07vGT/iRq0/EPg+cOLECeXnEPH17Pgx7ZfgbOOI1J4tpAzTHwh8n9Dps4OHO3bsGGWYmuiX4y8Evk/Mzs7S38Ugni0043WhDNNPCHwfGR0dVX4OEV82OjpKvxxNPFvoPwS+j1Cmacbc3JytB+EnpRaGjY4btf5D4PuMznOIqHHiR7PRw/CUiLzn9iRgGYHvQ0NDQ8otlIPupz/9qYyNjdn+Pe9JrXqlEU2JyH+4PQkoIfB9KJfLyeDgoPKTiEE0NzcnL7zwgqMH3/8pIv9HGmt7520R+XfhRq1f0UvHp5b380dGRiSVSrk9HU/L5XKSyWRc+e73lv7pkdqDIn42KQS93xH4PpfL5agl94FJtycACFs6ABAYBD4ABASBDwABQeADQEAQ+AAQEAQ+AAQEgQ8AAUHgA0BAEPgAEBAEPgAEBIEPAAFB4ANAQBD4ABAQBD4ABASBDwABQeADQEAQ+AAQEAQ+AAQEgQ8AAUHgA0BAEPgAEBAEPgAEhG2BH4lE7PpoAGhY8Xjc8pjnn3++vZ4/Z1vgh0Ihuz4aAPCAd999d7aeP8eWDgAEBIEPAAFB4ANAQBD4ABAQVOkAgIfYmZ11B34+n89Z+WCqdADAOqvZaSWbbd3SIfQBoH52Z2bdgX/nzp2y1Q9nWwcA6qeSmVayue7AL5fL01YnwgofAOqnkplWsrnuwP/iiy8+szqRaDRqdQgABJZKZlrJ5roDv1KpjFudCFs6AFA/lcy0ks1W9vD/YXUi4XDY6hAACCyVzLSSzXUH/tmzZ09anQgrfACon0pmWslmS2WZxWKxZHUyKq0+ASBoVLLSaiZbCvxSqXTZ2nQ4uAWAeqhkpdVMthr4/7Q2HbZ1AKAeKll5+/btSSt/3lLg37lz5y/WpiOyfv16q0MAIHBUstJq9aSlwJ+cnBy1Nh2RlpYWqnUA4GuEw2FpaWmxPM5qJlvupaNycJtIJKwOAYDAUMlIlSxWCXzLLRao1AGAR1Os0LGcxZYD//bt25b38VnhA8CjqWSkShZbDvzPP//8DatjRAh9AHgY1WxUyWLLgX/u3Lk59vEBwAzV/ftz587NWR2n9ABKoVD4u9UxBD4A/CuVbFTJYBHFwC+Xy69bHRMKhSSZTKp8HQA0pGQyqdoD33IGiygG/tTU1B/L5XLV6jhW+QBwn0omlsvl6tTU1B9Vvk/5TdtcLjdldUwikeASFgBI7bKVSuCrZO8y5cBfXFz8jco4tnUAQD0LVbNXRCPwVbd1tm3bpvqVANAwVLJQZztHRCPwRURu3LhxyuoYDm8BBJ3qYa1K5j5IK/AXFxd/qTKuo6ND52sBwNdUM1A1c5dpBf7Zs2dP5vP5nNVxLS0tVOwACKREIqHUGTOfz+dUnpp9kFbgL03iTyrjtm/frvvVAOA7qtmnmrUP0g78TCbzY5XD23g8ThdNAIGimnvlcrmayWR+rPv92oEvon6Q8NRTT5n4egDwBdXM0z2sXWYk8G/durWvWq3etTqupaWFih0AgZBMJpX27qvV6t1bt27tMzEHI4F/7ty5uevXr0+ojN25c6dSeRIA+EUoFJKdO3cqjb1+/fqESmfMhzES+CIixWLxJyrjQqEQB7gAGtr27duVF7aq2dL7K1QAAAgGSURBVPowxgL/7NmzJ69du/aJytgdO3ZIJBIxNRUA8IxIJCI7duxQGnvt2rVPdEsxH2Qs8EVE8vn8sOrY7u5ugzMBAG/QyTadTH0Yo4F/9uzZk5cvXx5XGRuPx9naAdBQtm/frlx+fvny5XGTq3sRw4Evol6xI1Lb2qF9MoBGEA6HlbdyTFbmPMh44J87d24um80eVxkbCoVk165dpqcEAI7btWuX8kFtNps9bqoy50HGA19E5KOPPnpB5fatSO2Ag+ZqAPyso6NDuRClXC5XP/rooxcMT0lEbAp8EZErV678THXsjh07aLsAwJfi8bjyVo6IXnY+jm2BPzk5OXrjxo2s6nidvw4BgBt0t6Vv3LiRnZycHDU4pS+xLfBFRBYWFr6reoAbCoVkz549pqcEALbZs2eP8kK1Wq3eXVhY+K7hKX2JrYGvc4ArUtvPT6VSJqcEALZIpVJaF0jtOqh9kK2BL1I7wFV5JGVZMpnkEBeAp3V0dGg1gszn8zm7DmofZHvgi4hcvXo1pbq1I1I7xKWrJgAvSiaTWoe01Wr17tWrVx3ZynAk8M+dOzd36dKlwzqfkUqlCH0AnpJMJrW3nS9dunTY7q2cZY4EvojIxMTEL7LZbEbnM3bu3EmTNQCeEIlElFseL8tms5mJiYlfGJrSYzkW+CIiN2/eHCoWiyXV8cuVO4Q+ADdFIhGtihwRkWKxWLp58+aQwWk9lqOBv1S18z2d/XxCH4CbTIR9tVq9m81mv+fUVs4yRwNfpNZRU3c/fzn02dMH4KRkMqkd9iK1fXvTnTDrseLuXeXFtpa+vr53tmzZov3XmUwmI/Pz8yamBACPZOKAVkTk008/HXOiBPNhXAt8EZHdu3f/c8OGDd/U/ZyZmRmZnp42MSUA+BcdHR1apZfLrl279smHH374LQNTUuJq4IuIDAwMfBaNRmO6nzM/Py+ZjFYREAD8C1Ml4fl8Pjc+Pv4NA1NS5vge/lddvXo1pVO5syyZTMrAwAAN1wAYEQqFZGBgwEjYF4vFklOXq76O6yt8EZHOzs62TZs2nWttbW3R/axKpSKnT5+WhYUFE1MDEEDxeNxYx95isVi6cuVKp9MVOQ/jicAXqYX+tm3bLjQ1Na0w8Xns6wNQYWq/XqRWfnnhwoVtXgh7EQ8FvohId3f3i1u3bn3bVOgXCgU5ffq0LC4umvg4AA0sHA7Lrl27jN3xqVardy9evPjDqampPxr5QAM8Ffgi5kO/UqnIzMyMnD9/3sTHAWhA27dvlx07dhg7A/Ri2It4MPBFzO7pL1tYWJCpqSkpFAqmPhKAz0UiEenu7jb6pKqX9uy/ypOBL2JP6IvIvdV+pVIx+bEAfCQUCt1b1Zvk5bAX8XDgi9RCf+PGjRkTdfoPqlQqcubMGW7oAgGUTCZl586dxku48/l87urVqymvhr2IxwN/makbuV9VKpXk448/poQTCIB4PC5PPfWUtLQY3TQQEfdv0NbLF4EvYq73zsMsLCzI+fPnJZvN2vHxAFyUSCRk+/btRvfpH+RmbxyrfBP4IiK9vb2/fvLJJ18xVcHzVaVSSaanp9nqARrA8nvYdqzoRWqVOJcuXTrs5AMmunwV+CIiXV1d/YlE4q+mD3MfVKlU5MKFCzI/P08NP+Aj4XBYksmkbNu2zdY2K8VisZTNZr/nRotjHb4LfJHaYe7atWvHEomE7b0pstmsZLNZVv2AhyWTSUkkEpJIJGz/rmw2m7l58+aQlw9nH8WXgb/M7i2eB1UqlXvhz14/4L7lgE8kEo40TfTjFs5X+TrwRewr3XycbDYrCwsLks1m2fYBHBAOhyWRSEg8HndkJf8gP5Rc1sP3gb+sr6/vnUQisdeJ1f5XlUoluX79uhQKBcnn85R5AgbE43GJRqMSiURk/fr1th2+fp2lt2eP+6UK53EaJvBFaqv9eDz+t3Xr1jn78/8QhUJBFhcX7/0IVCoVKRQK3PAFHhAKhSQSiUgoFLoX7uFw2FgDMx03btzILiwsfNfvq/oHNVTgL+vp6Ulv2rTpt83NzU1uz+VRHvW3AP52gEbyqNr35ZD3onK5XL1y5crPJicnR92ei2kNGfjL3NzmAeAvjbZ98zANHfgitW2eNWvWHNu8efOA23MB4E2XL18ev3Xr1r5G2r55mIYP/GVdXV390Wj0qB09eQD407Vr1z7J5/PDfrtApSowgb+sq6urv7W19Xfr16/vZasHCJ5qtXr3+vXrE8Vi8SdBCfplgQv8ZctbPevWrXvGy4e7AMwol8vVGzdunArC1s2jBDbwH5RKpf4QjUZ/4PTlLQD2y+fzuXw+/6dMJvNjt+fiNgL/AV1dXf3hcPhXrPoBf1tezS8uLv4yaNs2X4fAf4Tu7u4Xw+Hwz2OxWDfhD3hfuVyu5nK5qcXFxd947fFwryDw69Dd3f1ic3Pz/kgk8rSdbZkBWFMsFkuFQuHv5XL5dUL+8Qh8izo7O9ueeOKJl1evXv391tbWDn4AAOcUi8VSsVicvn379l8+//zzN4J6+KqKwDegp6cnHQqFBlavXt3T0tKymR8BQF+xWCyVSqXLt2/fnqxUKuON2OrAaQS+Tbq6uvpXrVr1nVAoNLBy5cpvNDc3d6xatapZRIRqIKBWPSMicufOnXK5XJ7+4osvPqtUKuN37tz5Bwet9iDwASAgVro9AQCAMwh8AAgIAh8AAoLAB4CAIPABICAIfAAICAIfAAKCwAeAgCDwASAg/hfnaHwkzfi7ggAAAABJRU5ErkJggg==
+  mediatype: image/png
+name: authorino-operator
+schema: olm.package
+---
+entries:
+- name: authorino-operator.v1.0.2
+- name: authorino-operator.v1.1.0
+- name: authorino-operator.v1.1.1
+  replaces: authorino-operator.v1.0.2
+  skips:
+  - authorino-operator.v1.1.0
+- name: authorino-operator.v1.1.2
+  replaces: authorino-operator.v1.1.1
+- name: authorino-operator.v1.1.3
+- name: authorino-operator.v1.2.1
+  replaces: authorino-operator.v1.1.2
+- name: authorino-operator.v1.2.2
+  replaces: authorino-operator.v1.2.1
+  skips:
+  - authorino-operator.v1.1.3
+name: stable
+package: authorino-operator
+schema: olm.channel
+---
+entries:
+- name: authorino-operator.v1.0.2
+- name: authorino-operator.v1.1.0
+- name: authorino-operator.v1.1.1
+  replaces: authorino-operator.v1.0.2
+  skips:
+  - authorino-operator.v1.1.0
+- name: authorino-operator.v1.1.2
+- name: authorino-operator.v1.1.3
+  replaces: authorino-operator.v1.1.1
+  skips:
+  - authorino-operator.v1.1.2
+name: tech-preview-v1
+package: authorino-operator
+schema: olm.channel
+---
+image: registry.redhat.io//3scale-tech-preview/authorino-operator-bundle@sha256:ade1e993e7b4243cc39a678ad36654aad06776b47c1edc776f00d3524ff4c129
+name: authorino-operator.v1.0.2
+package: authorino-operator
+properties:
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta1
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta2
+- type: olm.gvk
+  value:
+    group: operator.authorino.kuadrant.io
+    kind: Authorino
+    version: v1beta1
+- type: olm.package
+  value:
+    packageName: authorino-operator
+    version: 1.0.2
+- type: olm.csv.metadata
+  value:
+    annotations:
+      alm-examples: |-
+        [
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta1",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "hosts": [
+                "my-api.io"
+              ],
+              "identity": [
+                {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "in": "authorization_header",
+                    "keySelector": "APIKEY"
+                  },
+                  "name": "api-key-users"
+                }
+              ]
+            }
+          },
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta2",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "authentication": {
+                "api-key-users": {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "authorizationHeader": {
+                      "prefix": "APIKEY"
+                    }
+                  }
+                }
+              },
+              "hosts": [
+                "my-api.io"
+              ]
+            }
+          },
+          {
+            "apiVersion": "operator.authorino.kuadrant.io/v1beta1",
+            "kind": "Authorino",
+            "metadata": {
+              "name": "authorino-sample"
+            },
+            "spec": {
+              "listener": {
+                "tls": {
+                  "enabled": false
+                }
+              },
+              "oidcServer": {
+                "tls": {
+                  "enabled": false
+                }
+              }
+            }
+          }
+        ]
+      capabilities: Basic Install
+      categories: Integration & Delivery
+      containerImage: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:df96e91657c292de4f7bde8e3331260a6e8329995d42e28851787d6a674a05b1
+      createdAt: 2021-12-08T10-00-00Z
+      description: Authorino
+      features.operators.openshift.io/disconnected: "false"
+      features.operators.openshift.io/fips-compliant: "false"
+      features.operators.openshift.io/proxy-aware: "false"
+      features.operators.openshift.io/tls-profiles: "false"
+      features.operators.openshift.io/token-auth-aws: "false"
+      features.operators.openshift.io/token-auth-azure: "false"
+      features.operators.openshift.io/token-auth-gcp: "false"
+      operators.openshift.io/valid-subscription: '["Red Hat Integration", "Red Hat
+        3scale API Management"]'
+      operators.operatorframework.io/builder: operator-sdk-v1.22.0
+      operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
+      repository: https://github.com/Kuadrant/authorino-operator
+      support: kuadrant
+      tectonic-visibility: ocs
+    apiServiceDefinitions: {}
+    crdDescriptions:
+      owned:
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta1
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta2
+      - description: API to create instances of authorino
+        displayName: Authorino
+        kind: Authorino
+        name: authorinos.operator.authorino.kuadrant.io
+        version: v1beta1
+    description: |-
+      [Authorino](https://docs.kuadrant.io/authorino/) is Red Hat's Kubernetes-native lightweight external authorization service for tailor-made Zero Trust API security.
+
+      Install this Red Hat official distribution of [Authorino Operator](https://docs.kuadrant.io/authorino-operator/) to manage instances of Authorino in this cluster.
+
+      The current state of this distribution of the operator is: **_Technical Preview_**.
+
+      The Community version of Authorino Operator, based on upstream public images, is available in [OperatorHub.io](https://operatorhub.io/operator/authorino-operator).
+
+      ## Getting started
+
+      After installing the Operator, request an instance of the external authorization service by creating an `Authorino` custom resource.
+
+      **Minimal example (namespaced)**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        listener:
+          tls:
+            enabled: false
+        oidcServer:
+          tls:
+            enabled: false
+      ```
+
+      **Extended example**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        clusterWide: true
+        authConfigLabelSelectors: environment=production
+        secretLabelSelectors: authorino.kuadrant.io/component=authorino,environment=production
+
+        replicas: 2
+
+        evaluatorCacheSize: 2 # mb
+
+        logLevel: info
+        logMode: production
+
+        listener:
+          ports:
+            grpc: 50001
+            http: 5001
+          tls:
+            certSecretRef:
+              name: authorino-server-cert # secret must contain `tls.crt` and `tls.key` entries
+          timeout: 2
+
+        oidcServer:
+          port: 8083
+          tls:
+            certSecretRef:
+              name: authorino-oidc-server-cert # secret must contain `tls.crt` and `tls.key` entries
+
+        metrics:
+          port: 8080
+          deep: true
+
+        healthz:
+          port: 8081
+
+        tracing:
+          endpoint: rpc://otel-collector.observability.svc.cluster.local:4317
+          insecure: true
+
+        volumes:
+          items:
+            - name: keycloak-tls-cert
+              mountPath: /etc/ssl/certs
+              configMaps:
+                - keycloak-tls-cert
+              items: # details to mount the k8s configmap in the authorino pods
+                - key: keycloak.crt
+                  path: keycloak.crt
+          defaultMode: 420
+      ```
+
+      ### Cluster-wide vs Namespaced
+
+      Namespaced instances only watch auth resources (`AuthConfig` and `Secrets`) created in the same namespace as the Authorino service. Use this mode for dedicated instances that do not require elevated privileges.
+
+      Cluster-wide instances watch resources across the entire cluster (all namespaces.) Deploying and running Authorino in this mode requires elevated privileges.
+
+      ### Multi-tenancy
+
+      Use the `authConfigLabelSelectors` field of the `Authorino` custom resource to narrow the scope of the Authorino instance.
+
+      Only `AuthConfig` custom resources whose labels match the value of this field will be handled by the Authorino instance.
+
+      ## Protect a host
+
+      To protect a host, create an `AuthConfig` custom resource for the host. E.g.:
+
+      ```yaml
+      apiVersion: authorino.kuadrant.io/v1beta2
+      kind: AuthConfig
+      metadata:
+        name: my-api-protection
+      spec:
+        hosts:
+        - my-api.io
+
+        authentication:
+          "keycloak":
+            jwt:
+              issuerUrl: https://keycloak.keycloak.svc.cluster.local:8080/realms/my-realm
+
+        authorization:
+          "k8s-rbac":
+            kubernetesSubjectAccessReview:
+              user:
+                selector: auth.identity.user.username
+              resourceAttributes:
+                resource:
+                  value: my-api
+                verb:
+                  selector: request.method
+            cache:
+              key:
+                selector: auth.identity.user.username
+              ttl: 30
+          "after-2am-only":
+            rego: |
+              allow {
+                [hour, _, _] := time.clock(time.now_ns())
+                hour >= 2
+              }
+      ```
+
+      Make sure all requests to the host are fisrt checked with the Authorino instance, by configuring an Envoy proxy for external authz:
+
+      ```yaml
+      clusters:
+      - name: my-api
+        …
+      - name: authorino
+        connect_timeout: 0.25s
+        type: STRICT_DNS
+        lb_policy: ROUND_ROBIN
+        http2_protocol_options: {}
+        load_assignment:
+          cluster_name: authorino
+          endpoints:
+          - lb_endpoints:
+            - endpoint:
+                address:
+                  socket_address:
+                    address: authorino-authorino-authorization
+                    port_value: 50051
+      listeners:
+      - filter_chains:
+        - filters:
+          name: envoy.http_connection_manager
+          typed_config:
+            "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+            use_remote_address: true
+            route_config:
+              name: my-api-config
+              virtual_hosts:
+              - name: my-api-vs
+                domains:
+                - my-api.io
+                routes:
+                - match:
+                    prefix: /
+                  route:
+                    cluster: my-api
+            http_filters:
+            - name: envoy.filters.http.ext_authz
+              typed_config:
+                "@type": type.googleapis.com/envoy.extensions.filters.http.ext_authz.v3.ExtAuthz
+                transport_api_version: V3
+                failure_mode_allow: false
+                include_peer_certificate: true
+                grpc_service:
+                  envoy_grpc:
+                    cluster_name: authorino
+                  timeout: 1s
+      ```
+
+      ...or, if using Istio, by creating an [`AuthorizationPolicy`](https://istio.io/latest/docs/reference/config/security/authorization-policy/#AuthorizationPolicy) custom resource. Use `action: CUSTOM` in the resource and the Authorino authorization service configured in the mesh extension provider settings.
+
+      ## Features
+
+      **Authentication**
+
+      * JWT validation (with OpenID Connect Discovery)
+      * OAuth 2.0 Token Introspection (opaque tokens)
+      * Kubernetes TokenReview (ServiceAccount tokens)
+      * API key authentication
+      * X.509 client certificate authentication
+      * Anonymous access
+      * Proxy-handled (authentication performed by the proxy)
+
+      **Authorization**
+
+      * Built-in simple pattern matching (e.g. JWT claims, request attributes checking)
+      * OPA policies (inline Rego and fetch from external registry)
+      * Kubernetes SubjectAccessReview (resource and non-resource attributes)
+      * Authzed SpiceDB
+
+      **External metadata**
+
+      * HTTP request
+      * OpenID Connect User Info
+      * UMA-protected resource attributes
+
+      **Custom responses**
+
+      * Header injection (Festival Wristbands tokens, JSON, plain text)
+      * Envoy Dynamic Metadata
+      * Custom HTTP response (status code, headers, messages, body, etc)
+
+      **Callbacks**
+
+      * HTTP webhooks
+
+      **Caching**
+
+      * OpenID Connect and User-Managed Access configs
+      * JSON Web Keys (JWKs) and JSON Web Key Sets (JWKS)
+      * Access tokens
+      * External metadata
+      * Precompiled Rego policies
+      * Policy evaluation
+
+      Check out the full [Feature Specification](https://docs.kuadrant.io/authorino/docs/features/) and how-to guides in the [Kuadrant Docs](https://docs.kuadrant.io) website.
+    displayName: Red Hat - Authorino (Technical Preview)
+    installModes:
+    - supported: false
+      type: OwnNamespace
+    - supported: false
+      type: SingleNamespace
+    - supported: false
+      type: MultiNamespace
+    - supported: true
+      type: AllNamespaces
+    keywords:
+    - Authorino
+    - Authorino Operator
+    - Kuadrant
+    - Authorization
+    - Authentication
+    links:
+    - name: GitHub
+      url: https://github.com/kuadrant/authorino-operator
+    - name: Documentation
+      url: https://docs.kuadrant.io/authorino
+    maintainers:
+    - email: dcesare@redhat.com
+      name: Didier Di Cesare
+    - email: eastizle@redhat.com
+      name: Eguzki Astiz Lezaun
+    - email: mcassola@redhat.com
+      name: Guilherme Cassolato
+    maturity: alpha
+    minKubeVersion: 1.8.0
+    provider:
+      name: Red Hat
+relatedImages:
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:df96e91657c292de4f7bde8e3331260a6e8329995d42e28851787d6a674a05b1
+  name: authorino-rhel9-operator-df96e91657c292de4f7bde8e3331260a6e8329995d42e28851787d6a674a05b1-annotation
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:df96e91657c292de4f7bde8e3331260a6e8329995d42e28851787d6a674a05b1
+  name: manager
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9@sha256:27ab4042161278eb5ea71d1b2f7d7705cacd817dc7469f7032fce13e560c40c6
+  name: webhooks
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9@sha256:27ab4042161278eb5ea71d1b2f7d7705cacd817dc7469f7032fce13e560c40c6
+  name: authorino
+- image: registry.redhat.io//3scale-tech-preview/authorino-operator-bundle@sha256:ade1e993e7b4243cc39a678ad36654aad06776b47c1edc776f00d3524ff4c129
+  name: ""
+schema: olm.bundle
+---
+image: registry.redhat.io//3scale-tech-preview/authorino-operator-bundle@sha256:fa929a75fa0c1a52320d7aea77d03db4362c629f5cccd6eea2242fc782e27600
+name: authorino-operator.v1.1.0
+package: authorino-operator
+properties:
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta1
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta2
+- type: olm.gvk
+  value:
+    group: operator.authorino.kuadrant.io
+    kind: Authorino
+    version: v1beta1
+- type: olm.package
+  value:
+    packageName: authorino-operator
+    version: 1.1.0
+- type: olm.csv.metadata
+  value:
+    annotations:
+      alm-examples: |-
+        [
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta1",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "hosts": [
+                "my-api.io"
+              ],
+              "identity": [
+                {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "in": "authorization_header",
+                    "keySelector": "APIKEY"
+                  },
+                  "name": "api-key-users"
+                }
+              ]
+            }
+          },
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta2",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "authentication": {
+                "api-key-users": {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "authorizationHeader": {
+                      "prefix": "APIKEY"
+                    }
+                  }
+                }
+              },
+              "hosts": [
+                "my-api.io"
+              ]
+            }
+          },
+          {
+            "apiVersion": "operator.authorino.kuadrant.io/v1beta1",
+            "kind": "Authorino",
+            "metadata": {
+              "name": "authorino-sample"
+            },
+            "spec": {
+              "listener": {
+                "tls": {
+                  "enabled": false
+                }
+              },
+              "oidcServer": {
+                "tls": {
+                  "enabled": false
+                }
+              }
+            }
+          }
+        ]
+      capabilities: Basic Install
+      categories: Integration & Delivery
+      containerImage: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:48f8bb245f2c912cff8ac08af5862d6df68be5d198e26d488546cb997276dd93
+      createdAt: "2024-11-08T11:06:33Z"
+      description: Authorino
+      features.operators.openshift.io/disconnected: "false"
+      features.operators.openshift.io/fips-compliant: "false"
+      features.operators.openshift.io/proxy-aware: "false"
+      features.operators.openshift.io/tls-profiles: "false"
+      features.operators.openshift.io/token-auth-aws: "false"
+      features.operators.openshift.io/token-auth-azure: "false"
+      features.operators.openshift.io/token-auth-gcp: "false"
+      operators.openshift.io/valid-subscription: '["Red Hat Integration", "Red Hat
+        3scale API Management"]'
+      operators.operatorframework.io/builder: operator-sdk-v1.32.0
+      operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
+      repository: https://github.com/Kuadrant/authorino-operator
+      support: kuadrant
+      tectonic-visibility: ocs
+    apiServiceDefinitions: {}
+    crdDescriptions:
+      owned:
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta1
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta2
+      - description: API to create instances of authorino
+        displayName: Authorino
+        kind: Authorino
+        name: authorinos.operator.authorino.kuadrant.io
+        version: v1beta1
+    description: |-
+      [Authorino](https://docs.kuadrant.io/authorino/) is Red Hat's Kubernetes-native lightweight external authorization service for tailor-made Zero Trust API security.
+
+      Install this Red Hat official distribution of [Authorino Operator](https://docs.kuadrant.io/authorino-operator/) to manage instances of Authorino in this cluster.
+
+      The current state of this distribution of the operator is: **_Technical Preview_**.
+
+      The Community version of Authorino Operator, based on upstream public images, is available in [OperatorHub.io](https://operatorhub.io/operator/authorino-operator).
+
+      ## Getting started
+
+      After installing the Operator, request an instance of the external authorization service by creating an `Authorino` custom resource.
+
+      **Minimal example (namespaced)**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        listener:
+          tls:
+            enabled: false
+        oidcServer:
+          tls:
+            enabled: false
+      ```
+
+      **Extended example**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        clusterWide: true
+        authConfigLabelSelectors: environment=production
+        secretLabelSelectors: authorino.kuadrant.io/component=authorino,environment=production
+
+        replicas: 2
+
+        evaluatorCacheSize: 2 # mb
+
+        logLevel: info
+        logMode: production
+
+        listener:
+          ports:
+            grpc: 50001
+            http: 5001
+          tls:
+            certSecretRef:
+              name: authorino-server-cert # secret must contain `tls.crt` and `tls.key` entries
+          timeout: 2
+
+        oidcServer:
+          port: 8083
+          tls:
+            certSecretRef:
+              name: authorino-oidc-server-cert # secret must contain `tls.crt` and `tls.key` entries
+
+        metrics:
+          port: 8080
+          deep: true
+
+        healthz:
+          port: 8081
+
+        tracing:
+          endpoint: rpc://otel-collector.observability.svc.cluster.local:4317
+          insecure: true
+
+        volumes:
+          items:
+            - name: keycloak-tls-cert
+              mountPath: /etc/ssl/certs
+              configMaps:
+                - keycloak-tls-cert
+              items: # details to mount the k8s configmap in the authorino pods
+                - key: keycloak.crt
+                  path: keycloak.crt
+          defaultMode: 420
+      ```
+
+      ### Cluster-wide vs Namespaced
+
+      Namespaced instances only watch auth resources (`AuthConfig` and `Secrets`) created in the same namespace as the Authorino service. Use this mode for dedicated instances that do not require elevated privileges.
+
+      Cluster-wide instances watch resources across the entire cluster (all namespaces.) Deploying and running Authorino in this mode requires elevated privileges.
+
+      ### Multi-tenancy
+
+      Use the `authConfigLabelSelectors` field of the `Authorino` custom resource to narrow the scope of the Authorino instance.
+
+      Only `AuthConfig` custom resources whose labels match the value of this field will be handled by the Authorino instance.
+
+      ## Protect a host
+
+      To protect a host, create an `AuthConfig` custom resource for the host. E.g.:
+
+      ```yaml
+      apiVersion: authorino.kuadrant.io/v1beta2
+      kind: AuthConfig
+      metadata:
+        name: my-api-protection
+      spec:
+        hosts:
+        - my-api.io
+
+        authentication:
+          "keycloak":
+            jwt:
+              issuerUrl: https://keycloak.keycloak.svc.cluster.local:8080/realms/my-realm
+
+        authorization:
+          "k8s-rbac":
+            kubernetesSubjectAccessReview:
+              user:
+                selector: auth.identity.user.username
+              resourceAttributes:
+                resource:
+                  value: my-api
+                verb:
+                  selector: request.method
+            cache:
+              key:
+                selector: auth.identity.user.username
+              ttl: 30
+          "after-2am-only":
+            rego: |
+              allow {
+                [hour, _, _] := time.clock(time.now_ns())
+                hour >= 2
+              }
+      ```
+
+      Make sure all requests to the host are fisrt checked with the Authorino instance, by configuring an Envoy proxy for external authz:
+
+      ```yaml
+      clusters:
+      - name: my-api
+        …
+      - name: authorino
+        connect_timeout: 0.25s
+        type: STRICT_DNS
+        lb_policy: ROUND_ROBIN
+        http2_protocol_options: {}
+        load_assignment:
+          cluster_name: authorino
+          endpoints:
+          - lb_endpoints:
+            - endpoint:
+                address:
+                  socket_address:
+                    address: authorino-authorino-authorization
+                    port_value: 50051
+      listeners:
+      - filter_chains:
+        - filters:
+          name: envoy.http_connection_manager
+          typed_config:
+            "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+            use_remote_address: true
+            route_config:
+              name: my-api-config
+              virtual_hosts:
+              - name: my-api-vs
+                domains:
+                - my-api.io
+                routes:
+                - match:
+                    prefix: /
+                  route:
+                    cluster: my-api
+            http_filters:
+            - name: envoy.filters.http.ext_authz
+              typed_config:
+                "@type": type.googleapis.com/envoy.extensions.filters.http.ext_authz.v3.ExtAuthz
+                transport_api_version: V3
+                failure_mode_allow: false
+                include_peer_certificate: true
+                grpc_service:
+                  envoy_grpc:
+                    cluster_name: authorino
+                  timeout: 1s
+      ```
+
+      ...or, if using Istio, by creating an [`AuthorizationPolicy`](https://istio.io/latest/docs/reference/config/security/authorization-policy/#AuthorizationPolicy) custom resource. Use `action: CUSTOM` in the resource and the Authorino authorization service configured in the mesh extension provider settings.
+
+      ## Features
+
+      **Authentication**
+
+      * JWT validation (with OpenID Connect Discovery)
+      * OAuth 2.0 Token Introspection (opaque tokens)
+      * Kubernetes TokenReview (ServiceAccount tokens)
+      * API key authentication
+      * X.509 client certificate authentication
+      * Anonymous access
+      * Proxy-handled (authentication performed by the proxy)
+
+      **Authorization**
+
+      * Built-in simple pattern matching (e.g. JWT claims, request attributes checking)
+      * OPA policies (inline Rego and fetch from external registry)
+      * Kubernetes SubjectAccessReview (resource and non-resource attributes)
+      * Authzed SpiceDB
+
+      **External metadata**
+
+      * HTTP request
+      * OpenID Connect User Info
+      * UMA-protected resource attributes
+
+      **Custom responses**
+
+      * Header injection (Festival Wristbands tokens, JSON, plain text)
+      * Envoy Dynamic Metadata
+      * Custom HTTP response (status code, headers, messages, body, etc)
+
+      **Callbacks**
+
+      * HTTP webhooks
+
+      **Caching**
+
+      * OpenID Connect and User-Managed Access configs
+      * JSON Web Keys (JWKs) and JSON Web Key Sets (JWKS)
+      * Access tokens
+      * External metadata
+      * Precompiled Rego policies
+      * Policy evaluation
+
+      Check out the full [Feature Specification](https://docs.kuadrant.io/authorino/docs/features/) and how-to guides in the [Kuadrant Docs](https://docs.kuadrant.io) website.
+    displayName: Red Hat - Authorino (Technical Preview)
+    installModes:
+    - supported: false
+      type: OwnNamespace
+    - supported: false
+      type: SingleNamespace
+    - supported: false
+      type: MultiNamespace
+    - supported: true
+      type: AllNamespaces
+    keywords:
+    - Authorino
+    - Authorino Operator
+    - Kuadrant
+    - Authorization
+    - Authentication
+    labels:
+      operatorframework.io/arch.amd64: supported
+      operatorframework.io/arch.arm64: supported
+      operatorframework.io/arch.ppc64le: supported
+      operatorframework.io/arch.s390x: supported
+      operatorframework.io/os.linux: supported
+    links:
+    - name: GitHub
+      url: https://github.com/kuadrant/authorino-operator
+    - name: Documentation
+      url: https://docs.kuadrant.io/authorino
+    maintainers:
+    - email: dcesare@redhat.com
+      name: Didier Di Cesare
+    - email: eastizle@redhat.com
+      name: Eguzki Astiz Lezaun
+    - email: mcassola@redhat.com
+      name: Guilherme Cassolato
+    maturity: alpha
+    minKubeVersion: 1.25.0
+    provider:
+      name: Red Hat
+relatedImages:
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:48f8bb245f2c912cff8ac08af5862d6df68be5d198e26d488546cb997276dd93
+  name: authorino-rhel9-operator-48f8bb245f2c912cff8ac08af5862d6df68be5d198e26d488546cb997276dd93-annotation
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:48f8bb245f2c912cff8ac08af5862d6df68be5d198e26d488546cb997276dd93
+  name: manager
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9@sha256:26ec6d4579f4dd746f5e898b8f086963849b98c704a7a7f8b4dc7517cf0c7003
+  name: webhooks
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9@sha256:26ec6d4579f4dd746f5e898b8f086963849b98c704a7a7f8b4dc7517cf0c7003
+  name: authorino
+- image: registry.redhat.io//3scale-tech-preview/authorino-operator-bundle@sha256:fa929a75fa0c1a52320d7aea77d03db4362c629f5cccd6eea2242fc782e27600
+  name: ""
+schema: olm.bundle
+---
+image: registry.redhat.io//3scale-tech-preview/authorino-operator-bundle@sha256:75ef745eee540a43a00c49107c5cc9ed51c03ae1c5554de51ee798f1ac7d55f0
+name: authorino-operator.v1.1.1
+package: authorino-operator
+properties:
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta1
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta2
+- type: olm.gvk
+  value:
+    group: operator.authorino.kuadrant.io
+    kind: Authorino
+    version: v1beta1
+- type: olm.package
+  value:
+    packageName: authorino-operator
+    version: 1.1.1
+- type: olm.csv.metadata
+  value:
+    annotations:
+      alm-examples: |-
+        [
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta1",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "hosts": [
+                "my-api.io"
+              ],
+              "identity": [
+                {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "in": "authorization_header",
+                    "keySelector": "APIKEY"
+                  },
+                  "name": "api-key-users"
+                }
+              ]
+            }
+          },
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta2",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "authentication": {
+                "api-key-users": {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "authorizationHeader": {
+                      "prefix": "APIKEY"
+                    }
+                  }
+                }
+              },
+              "hosts": [
+                "my-api.io"
+              ]
+            }
+          },
+          {
+            "apiVersion": "operator.authorino.kuadrant.io/v1beta1",
+            "kind": "Authorino",
+            "metadata": {
+              "name": "authorino-sample"
+            },
+            "spec": {
+              "listener": {
+                "tls": {
+                  "enabled": false
+                }
+              },
+              "oidcServer": {
+                "tls": {
+                  "enabled": false
+                }
+              }
+            }
+          }
+        ]
+      capabilities: Basic Install
+      categories: Integration & Delivery
+      containerImage: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:94b514558b028f314c417ede8c22fb0d79c98fb8d7728f83a4c094309bee8a8d
+      createdAt: "2024-11-08T11:06:33Z"
+      description: Authorino
+      features.operators.openshift.io/disconnected: "false"
+      features.operators.openshift.io/fips-compliant: "false"
+      features.operators.openshift.io/proxy-aware: "false"
+      features.operators.openshift.io/tls-profiles: "false"
+      features.operators.openshift.io/token-auth-aws: "false"
+      features.operators.openshift.io/token-auth-azure: "false"
+      features.operators.openshift.io/token-auth-gcp: "false"
+      operators.openshift.io/valid-subscription: '["Red Hat Integration", "Red Hat
+        3scale API Management"]'
+      operators.operatorframework.io/builder: operator-sdk-v1.32.0
+      operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
+      repository: https://github.com/Kuadrant/authorino-operator
+      support: kuadrant
+      tectonic-visibility: ocs
+    apiServiceDefinitions: {}
+    crdDescriptions:
+      owned:
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta1
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta2
+      - description: API to create instances of authorino
+        displayName: Authorino
+        kind: Authorino
+        name: authorinos.operator.authorino.kuadrant.io
+        version: v1beta1
+    description: |-
+      [Authorino](https://docs.kuadrant.io/authorino/) is Red Hat's Kubernetes-native lightweight external authorization service for tailor-made Zero Trust API security.
+
+      Install this Red Hat official distribution of [Authorino Operator](https://docs.kuadrant.io/authorino-operator/) to manage instances of Authorino in this cluster.
+
+      The current state of this distribution of the operator is: **_Technical Preview_**.
+
+      The Community version of Authorino Operator, based on upstream public images, is available in [OperatorHub.io](https://operatorhub.io/operator/authorino-operator).
+
+      ## Getting started
+
+      After installing the Operator, request an instance of the external authorization service by creating an `Authorino` custom resource.
+
+      **Minimal example (namespaced)**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        listener:
+          tls:
+            enabled: false
+        oidcServer:
+          tls:
+            enabled: false
+      ```
+
+      **Extended example**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        clusterWide: true
+        authConfigLabelSelectors: environment=production
+        secretLabelSelectors: authorino.kuadrant.io/component=authorino,environment=production
+
+        replicas: 2
+
+        evaluatorCacheSize: 2 # mb
+
+        logLevel: info
+        logMode: production
+
+        listener:
+          ports:
+            grpc: 50001
+            http: 5001
+          tls:
+            certSecretRef:
+              name: authorino-server-cert # secret must contain `tls.crt` and `tls.key` entries
+          timeout: 2
+
+        oidcServer:
+          port: 8083
+          tls:
+            certSecretRef:
+              name: authorino-oidc-server-cert # secret must contain `tls.crt` and `tls.key` entries
+
+        metrics:
+          port: 8080
+          deep: true
+
+        healthz:
+          port: 8081
+
+        tracing:
+          endpoint: rpc://otel-collector.observability.svc.cluster.local:4317
+          insecure: true
+
+        volumes:
+          items:
+            - name: keycloak-tls-cert
+              mountPath: /etc/ssl/certs
+              configMaps:
+                - keycloak-tls-cert
+              items: # details to mount the k8s configmap in the authorino pods
+                - key: keycloak.crt
+                  path: keycloak.crt
+          defaultMode: 420
+      ```
+
+      ### Cluster-wide vs Namespaced
+
+      Namespaced instances only watch auth resources (`AuthConfig` and `Secrets`) created in the same namespace as the Authorino service. Use this mode for dedicated instances that do not require elevated privileges.
+
+      Cluster-wide instances watch resources across the entire cluster (all namespaces.) Deploying and running Authorino in this mode requires elevated privileges.
+
+      ### Multi-tenancy
+
+      Use the `authConfigLabelSelectors` field of the `Authorino` custom resource to narrow the scope of the Authorino instance.
+
+      Only `AuthConfig` custom resources whose labels match the value of this field will be handled by the Authorino instance.
+
+      ## Protect a host
+
+      To protect a host, create an `AuthConfig` custom resource for the host. E.g.:
+
+      ```yaml
+      apiVersion: authorino.kuadrant.io/v1beta2
+      kind: AuthConfig
+      metadata:
+        name: my-api-protection
+      spec:
+        hosts:
+        - my-api.io
+
+        authentication:
+          "keycloak":
+            jwt:
+              issuerUrl: https://keycloak.keycloak.svc.cluster.local:8080/realms/my-realm
+
+        authorization:
+          "k8s-rbac":
+            kubernetesSubjectAccessReview:
+              user:
+                selector: auth.identity.user.username
+              resourceAttributes:
+                resource:
+                  value: my-api
+                verb:
+                  selector: request.method
+            cache:
+              key:
+                selector: auth.identity.user.username
+              ttl: 30
+          "after-2am-only":
+            rego: |
+              allow {
+                [hour, _, _] := time.clock(time.now_ns())
+                hour >= 2
+              }
+      ```
+
+      Make sure all requests to the host are fisrt checked with the Authorino instance, by configuring an Envoy proxy for external authz:
+
+      ```yaml
+      clusters:
+      - name: my-api
+        …
+      - name: authorino
+        connect_timeout: 0.25s
+        type: STRICT_DNS
+        lb_policy: ROUND_ROBIN
+        http2_protocol_options: {}
+        load_assignment:
+          cluster_name: authorino
+          endpoints:
+          - lb_endpoints:
+            - endpoint:
+                address:
+                  socket_address:
+                    address: authorino-authorino-authorization
+                    port_value: 50051
+      listeners:
+      - filter_chains:
+        - filters:
+          name: envoy.http_connection_manager
+          typed_config:
+            "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+            use_remote_address: true
+            route_config:
+              name: my-api-config
+              virtual_hosts:
+              - name: my-api-vs
+                domains:
+                - my-api.io
+                routes:
+                - match:
+                    prefix: /
+                  route:
+                    cluster: my-api
+            http_filters:
+            - name: envoy.filters.http.ext_authz
+              typed_config:
+                "@type": type.googleapis.com/envoy.extensions.filters.http.ext_authz.v3.ExtAuthz
+                transport_api_version: V3
+                failure_mode_allow: false
+                include_peer_certificate: true
+                grpc_service:
+                  envoy_grpc:
+                    cluster_name: authorino
+                  timeout: 1s
+      ```
+
+      ...or, if using Istio, by creating an [`AuthorizationPolicy`](https://istio.io/latest/docs/reference/config/security/authorization-policy/#AuthorizationPolicy) custom resource. Use `action: CUSTOM` in the resource and the Authorino authorization service configured in the mesh extension provider settings.
+
+      ## Features
+
+      **Authentication**
+
+      * JWT validation (with OpenID Connect Discovery)
+      * OAuth 2.0 Token Introspection (opaque tokens)
+      * Kubernetes TokenReview (ServiceAccount tokens)
+      * API key authentication
+      * X.509 client certificate authentication
+      * Anonymous access
+      * Proxy-handled (authentication performed by the proxy)
+
+      **Authorization**
+
+      * Built-in simple pattern matching (e.g. JWT claims, request attributes checking)
+      * OPA policies (inline Rego and fetch from external registry)
+      * Kubernetes SubjectAccessReview (resource and non-resource attributes)
+      * Authzed SpiceDB
+
+      **External metadata**
+
+      * HTTP request
+      * OpenID Connect User Info
+      * UMA-protected resource attributes
+
+      **Custom responses**
+
+      * Header injection (Festival Wristbands tokens, JSON, plain text)
+      * Envoy Dynamic Metadata
+      * Custom HTTP response (status code, headers, messages, body, etc)
+
+      **Callbacks**
+
+      * HTTP webhooks
+
+      **Caching**
+
+      * OpenID Connect and User-Managed Access configs
+      * JSON Web Keys (JWKs) and JSON Web Key Sets (JWKS)
+      * Access tokens
+      * External metadata
+      * Precompiled Rego policies
+      * Policy evaluation
+
+      Check out the full [Feature Specification](https://docs.kuadrant.io/authorino/docs/features/) and how-to guides in the [Kuadrant Docs](https://docs.kuadrant.io) website.
+    displayName: Red Hat - Authorino (Technical Preview)
+    installModes:
+    - supported: false
+      type: OwnNamespace
+    - supported: false
+      type: SingleNamespace
+    - supported: false
+      type: MultiNamespace
+    - supported: true
+      type: AllNamespaces
+    keywords:
+    - Authorino
+    - Authorino Operator
+    - Kuadrant
+    - Authorization
+    - Authentication
+    labels:
+      operatorframework.io/arch.amd64: supported
+      operatorframework.io/arch.arm64: supported
+      operatorframework.io/arch.ppc64le: supported
+      operatorframework.io/arch.s390x: supported
+      operatorframework.io/os.linux: supported
+    links:
+    - name: GitHub
+      url: https://github.com/kuadrant/authorino-operator
+    - name: Documentation
+      url: https://docs.kuadrant.io/authorino
+    maintainers:
+    - email: dcesare@redhat.com
+      name: Didier Di Cesare
+    - email: eastizle@redhat.com
+      name: Eguzki Astiz Lezaun
+    - email: mcassola@redhat.com
+      name: Guilherme Cassolato
+    maturity: alpha
+    minKubeVersion: 1.25.0
+    provider:
+      name: Red Hat
+relatedImages:
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:94b514558b028f314c417ede8c22fb0d79c98fb8d7728f83a4c094309bee8a8d
+  name: authorino-rhel9-operator-94b514558b028f314c417ede8c22fb0d79c98fb8d7728f83a4c094309bee8a8d-annotation
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:94b514558b028f314c417ede8c22fb0d79c98fb8d7728f83a4c094309bee8a8d
+  name: manager
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9@sha256:3614034c1462c776ae49ef90b90f8f15631511c514297338107c6f5718f519aa
+  name: webhooks
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9@sha256:3614034c1462c776ae49ef90b90f8f15631511c514297338107c6f5718f519aa
+  name: authorino
+- image: registry.redhat.io//3scale-tech-preview/authorino-operator-bundle@sha256:75ef745eee540a43a00c49107c5cc9ed51c03ae1c5554de51ee798f1ac7d55f0
+  name: ""
+schema: olm.bundle
+---
+image: registry.redhat.io//3scale-tech-preview/authorino-operator-bundle@sha256:f1a2c63a9903c2dbf9b3bf1b3e200f85258d8d6f6518d9e48756126d8f37653c
+name: authorino-operator.v1.1.2
+package: authorino-operator
+properties:
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta1
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta2
+- type: olm.gvk
+  value:
+    group: operator.authorino.kuadrant.io
+    kind: Authorino
+    version: v1beta1
+- type: olm.package
+  value:
+    packageName: authorino-operator
+    version: 1.1.2
+- type: olm.csv.metadata
+  value:
+    annotations:
+      alm-examples: |-
+        [
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta1",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "hosts": [
+                "my-api.io"
+              ],
+              "identity": [
+                {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "in": "authorization_header",
+                    "keySelector": "APIKEY"
+                  },
+                  "name": "api-key-users"
+                }
+              ]
+            }
+          },
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta2",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "authentication": {
+                "api-key-users": {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "authorizationHeader": {
+                      "prefix": "APIKEY"
+                    }
+                  }
+                }
+              },
+              "hosts": [
+                "my-api.io"
+              ]
+            }
+          },
+          {
+            "apiVersion": "operator.authorino.kuadrant.io/v1beta1",
+            "kind": "Authorino",
+            "metadata": {
+              "name": "authorino-sample"
+            },
+            "spec": {
+              "listener": {
+                "tls": {
+                  "enabled": false
+                }
+              },
+              "oidcServer": {
+                "tls": {
+                  "enabled": false
+                }
+              }
+            }
+          }
+        ]
+      capabilities: Basic Install
+      categories: Integration & Delivery
+      containerImage: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:54f49eb217d888ac48882e3b333aeafa463f3cc9832050e29e17ec2116599690
+      createdAt: "2024-11-08T11:06:33Z"
+      description: Authorino
+      features.operators.openshift.io/disconnected: "false"
+      features.operators.openshift.io/fips-compliant: "false"
+      features.operators.openshift.io/proxy-aware: "false"
+      features.operators.openshift.io/tls-profiles: "false"
+      features.operators.openshift.io/token-auth-aws: "false"
+      features.operators.openshift.io/token-auth-azure: "false"
+      features.operators.openshift.io/token-auth-gcp: "false"
+      operators.openshift.io/valid-subscription: '["Red Hat Integration", "Red Hat
+        3scale API Management"]'
+      operators.operatorframework.io/builder: operator-sdk-v1.32.0
+      operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
+      repository: https://github.com/Kuadrant/authorino-operator
+      support: kuadrant
+      tectonic-visibility: ocs
+    apiServiceDefinitions: {}
+    crdDescriptions:
+      owned:
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta1
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta2
+      - description: API to create instances of authorino
+        displayName: Authorino
+        kind: Authorino
+        name: authorinos.operator.authorino.kuadrant.io
+        version: v1beta1
+    description: |-
+      [Authorino](https://docs.kuadrant.io/authorino/) is Red Hat's Kubernetes-native lightweight external authorization service for tailor-made Zero Trust API security.
+
+      Install this Red Hat official distribution of [Authorino Operator](https://docs.kuadrant.io/authorino-operator/) to manage instances of Authorino in this cluster.
+
+      The current state of this distribution of the operator is: **_Technical Preview_**.
+
+      The Community version of Authorino Operator, based on upstream public images, is available in [OperatorHub.io](https://operatorhub.io/operator/authorino-operator).
+
+      ## Getting started
+
+      After installing the Operator, request an instance of the external authorization service by creating an `Authorino` custom resource.
+
+      **Minimal example (namespaced)**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        listener:
+          tls:
+            enabled: false
+        oidcServer:
+          tls:
+            enabled: false
+      ```
+
+      **Extended example**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        clusterWide: true
+        authConfigLabelSelectors: environment=production
+        secretLabelSelectors: authorino.kuadrant.io/component=authorino,environment=production
+
+        replicas: 2
+
+        evaluatorCacheSize: 2 # mb
+
+        logLevel: info
+        logMode: production
+
+        listener:
+          ports:
+            grpc: 50001
+            http: 5001
+          tls:
+            certSecretRef:
+              name: authorino-server-cert # secret must contain `tls.crt` and `tls.key` entries
+          timeout: 2
+
+        oidcServer:
+          port: 8083
+          tls:
+            certSecretRef:
+              name: authorino-oidc-server-cert # secret must contain `tls.crt` and `tls.key` entries
+
+        metrics:
+          port: 8080
+          deep: true
+
+        healthz:
+          port: 8081
+
+        tracing:
+          endpoint: rpc://otel-collector.observability.svc.cluster.local:4317
+          insecure: true
+
+        volumes:
+          items:
+            - name: keycloak-tls-cert
+              mountPath: /etc/ssl/certs
+              configMaps:
+                - keycloak-tls-cert
+              items: # details to mount the k8s configmap in the authorino pods
+                - key: keycloak.crt
+                  path: keycloak.crt
+          defaultMode: 420
+      ```
+
+      ### Cluster-wide vs Namespaced
+
+      Namespaced instances only watch auth resources (`AuthConfig` and `Secrets`) created in the same namespace as the Authorino service. Use this mode for dedicated instances that do not require elevated privileges.
+
+      Cluster-wide instances watch resources across the entire cluster (all namespaces.) Deploying and running Authorino in this mode requires elevated privileges.
+
+      ### Multi-tenancy
+
+      Use the `authConfigLabelSelectors` field of the `Authorino` custom resource to narrow the scope of the Authorino instance.
+
+      Only `AuthConfig` custom resources whose labels match the value of this field will be handled by the Authorino instance.
+
+      ## Protect a host
+
+      To protect a host, create an `AuthConfig` custom resource for the host. E.g.:
+
+      ```yaml
+      apiVersion: authorino.kuadrant.io/v1beta2
+      kind: AuthConfig
+      metadata:
+        name: my-api-protection
+      spec:
+        hosts:
+        - my-api.io
+
+        authentication:
+          "keycloak":
+            jwt:
+              issuerUrl: https://keycloak.keycloak.svc.cluster.local:8080/realms/my-realm
+
+        authorization:
+          "k8s-rbac":
+            kubernetesSubjectAccessReview:
+              user:
+                selector: auth.identity.user.username
+              resourceAttributes:
+                resource:
+                  value: my-api
+                verb:
+                  selector: request.method
+            cache:
+              key:
+                selector: auth.identity.user.username
+              ttl: 30
+          "after-2am-only":
+            rego: |
+              allow {
+                [hour, _, _] := time.clock(time.now_ns())
+                hour >= 2
+              }
+      ```
+
+      Make sure all requests to the host are fisrt checked with the Authorino instance, by configuring an Envoy proxy for external authz:
+
+      ```yaml
+      clusters:
+      - name: my-api
+        …
+      - name: authorino
+        connect_timeout: 0.25s
+        type: STRICT_DNS
+        lb_policy: ROUND_ROBIN
+        http2_protocol_options: {}
+        load_assignment:
+          cluster_name: authorino
+          endpoints:
+          - lb_endpoints:
+            - endpoint:
+                address:
+                  socket_address:
+                    address: authorino-authorino-authorization
+                    port_value: 50051
+      listeners:
+      - filter_chains:
+        - filters:
+          name: envoy.http_connection_manager
+          typed_config:
+            "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+            use_remote_address: true
+            route_config:
+              name: my-api-config
+              virtual_hosts:
+              - name: my-api-vs
+                domains:
+                - my-api.io
+                routes:
+                - match:
+                    prefix: /
+                  route:
+                    cluster: my-api
+            http_filters:
+            - name: envoy.filters.http.ext_authz
+              typed_config:
+                "@type": type.googleapis.com/envoy.extensions.filters.http.ext_authz.v3.ExtAuthz
+                transport_api_version: V3
+                failure_mode_allow: false
+                include_peer_certificate: true
+                grpc_service:
+                  envoy_grpc:
+                    cluster_name: authorino
+                  timeout: 1s
+      ```
+
+      ...or, if using Istio, by creating an [`AuthorizationPolicy`](https://istio.io/latest/docs/reference/config/security/authorization-policy/#AuthorizationPolicy) custom resource. Use `action: CUSTOM` in the resource and the Authorino authorization service configured in the mesh extension provider settings.
+
+      ## Features
+
+      **Authentication**
+
+      * JWT validation (with OpenID Connect Discovery)
+      * OAuth 2.0 Token Introspection (opaque tokens)
+      * Kubernetes TokenReview (ServiceAccount tokens)
+      * API key authentication
+      * X.509 client certificate authentication
+      * Anonymous access
+      * Proxy-handled (authentication performed by the proxy)
+
+      **Authorization**
+
+      * Built-in simple pattern matching (e.g. JWT claims, request attributes checking)
+      * OPA policies (inline Rego and fetch from external registry)
+      * Kubernetes SubjectAccessReview (resource and non-resource attributes)
+      * Authzed SpiceDB
+
+      **External metadata**
+
+      * HTTP request
+      * OpenID Connect User Info
+      * UMA-protected resource attributes
+
+      **Custom responses**
+
+      * Header injection (Festival Wristbands tokens, JSON, plain text)
+      * Envoy Dynamic Metadata
+      * Custom HTTP response (status code, headers, messages, body, etc)
+
+      **Callbacks**
+
+      * HTTP webhooks
+
+      **Caching**
+
+      * OpenID Connect and User-Managed Access configs
+      * JSON Web Keys (JWKs) and JSON Web Key Sets (JWKS)
+      * Access tokens
+      * External metadata
+      * Precompiled Rego policies
+      * Policy evaluation
+
+      Check out the full [Feature Specification](https://docs.kuadrant.io/authorino/docs/features/) and how-to guides in the [Kuadrant Docs](https://docs.kuadrant.io) website.
+    displayName: Red Hat - Authorino (Technical Preview)
+    installModes:
+    - supported: false
+      type: OwnNamespace
+    - supported: false
+      type: SingleNamespace
+    - supported: false
+      type: MultiNamespace
+    - supported: true
+      type: AllNamespaces
+    keywords:
+    - Authorino
+    - Authorino Operator
+    - Kuadrant
+    - Authorization
+    - Authentication
+    labels:
+      operatorframework.io/arch.amd64: supported
+      operatorframework.io/arch.arm64: supported
+      operatorframework.io/arch.ppc64le: supported
+      operatorframework.io/arch.s390x: supported
+      operatorframework.io/os.linux: supported
+    links:
+    - name: GitHub
+      url: https://github.com/kuadrant/authorino-operator
+    - name: Documentation
+      url: https://docs.kuadrant.io/authorino
+    maintainers:
+    - email: dcesare@redhat.com
+      name: Didier Di Cesare
+    - email: eastizle@redhat.com
+      name: Eguzki Astiz Lezaun
+    - email: mcassola@redhat.com
+      name: Guilherme Cassolato
+    maturity: alpha
+    minKubeVersion: 1.25.0
+    provider:
+      name: Red Hat
+relatedImages:
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:54f49eb217d888ac48882e3b333aeafa463f3cc9832050e29e17ec2116599690
+  name: authorino-rhel9-operator-54f49eb217d888ac48882e3b333aeafa463f3cc9832050e29e17ec2116599690-annotation
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:54f49eb217d888ac48882e3b333aeafa463f3cc9832050e29e17ec2116599690
+  name: manager
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9@sha256:da01e89508304fc08f4b189e700ab72a4c3d51c277928123eb19905e41282f9d
+  name: webhooks
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9@sha256:da01e89508304fc08f4b189e700ab72a4c3d51c277928123eb19905e41282f9d
+  name: authorino
+- image: registry.redhat.io/openshift4/ose-cli-rhel9@sha256:585079437308204fb50649283b4b750026f723c90b8da883860d3076c2df6a8c
+  name: migrator
+- image: registry.redhat.io//3scale-tech-preview/authorino-operator-bundle@sha256:f1a2c63a9903c2dbf9b3bf1b3e200f85258d8d6f6518d9e48756126d8f37653c
+  name: ""
+schema: olm.bundle
+---
+image: registry.redhat.io//3scale-tech-preview/authorino-operator-bundle@sha256:75cb78f7a40d3daedbc11cbbb5505e029328b4120f0de11d4f6423de943e92d8
+name: authorino-operator.v1.1.3
+package: authorino-operator
+properties:
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta1
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta2
+- type: olm.gvk
+  value:
+    group: operator.authorino.kuadrant.io
+    kind: Authorino
+    version: v1beta1
+- type: olm.package
+  value:
+    packageName: authorino-operator
+    version: 1.1.3
+- type: olm.csv.metadata
+  value:
+    annotations:
+      alm-examples: |-
+        [
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta1",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "hosts": [
+                "my-api.io"
+              ],
+              "identity": [
+                {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "in": "authorization_header",
+                    "keySelector": "APIKEY"
+                  },
+                  "name": "api-key-users"
+                }
+              ]
+            }
+          },
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta2",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "authentication": {
+                "api-key-users": {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "authorizationHeader": {
+                      "prefix": "APIKEY"
+                    }
+                  }
+                }
+              },
+              "hosts": [
+                "my-api.io"
+              ]
+            }
+          },
+          {
+            "apiVersion": "operator.authorino.kuadrant.io/v1beta1",
+            "kind": "Authorino",
+            "metadata": {
+              "name": "authorino-sample"
+            },
+            "spec": {
+              "listener": {
+                "tls": {
+                  "enabled": false
+                }
+              },
+              "oidcServer": {
+                "tls": {
+                  "enabled": false
+                }
+              }
+            }
+          }
+        ]
+      capabilities: Basic Install
+      categories: Integration & Delivery
+      containerImage: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:eb574781cf39917f8f5d9e5c806f520534601f819ee1ebcbb751832da8938008
+      createdAt: "2024-11-08T11:06:33Z"
+      description: Authorino
+      features.operators.openshift.io/disconnected: "false"
+      features.operators.openshift.io/fips-compliant: "false"
+      features.operators.openshift.io/proxy-aware: "false"
+      features.operators.openshift.io/tls-profiles: "false"
+      features.operators.openshift.io/token-auth-aws: "false"
+      features.operators.openshift.io/token-auth-azure: "false"
+      features.operators.openshift.io/token-auth-gcp: "false"
+      operators.openshift.io/valid-subscription: '["Red Hat Integration", "Red Hat
+        3scale API Management"]'
+      operators.operatorframework.io/builder: operator-sdk-v1.32.0
+      operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
+      repository: https://github.com/Kuadrant/authorino-operator
+      support: kuadrant
+      tectonic-visibility: ocs
+    apiServiceDefinitions: {}
+    crdDescriptions:
+      owned:
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta1
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta2
+      - description: API to create instances of authorino
+        displayName: Authorino
+        kind: Authorino
+        name: authorinos.operator.authorino.kuadrant.io
+        version: v1beta1
+    description: |-
+      [Authorino](https://docs.kuadrant.io/authorino/) is Red Hat's Kubernetes-native lightweight external authorization service for tailor-made Zero Trust API security.
+
+      Install this Red Hat official distribution of [Authorino Operator](https://docs.kuadrant.io/authorino-operator/) to manage instances of Authorino in this cluster.
+
+      The current state of this distribution of the operator is: **_Technical Preview_**.
+
+      The Community version of Authorino Operator, based on upstream public images, is available in [OperatorHub.io](https://operatorhub.io/operator/authorino-operator).
+
+      ## Getting started
+
+      After installing the Operator, request an instance of the external authorization service by creating an `Authorino` custom resource.
+
+      **Minimal example (namespaced)**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        listener:
+          tls:
+            enabled: false
+        oidcServer:
+          tls:
+            enabled: false
+      ```
+
+      **Extended example**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        clusterWide: true
+        authConfigLabelSelectors: environment=production
+        secretLabelSelectors: authorino.kuadrant.io/component=authorino,environment=production
+
+        replicas: 2
+
+        evaluatorCacheSize: 2 # mb
+
+        logLevel: info
+        logMode: production
+
+        listener:
+          ports:
+            grpc: 50001
+            http: 5001
+          tls:
+            certSecretRef:
+              name: authorino-server-cert # secret must contain `tls.crt` and `tls.key` entries
+          timeout: 2
+
+        oidcServer:
+          port: 8083
+          tls:
+            certSecretRef:
+              name: authorino-oidc-server-cert # secret must contain `tls.crt` and `tls.key` entries
+
+        metrics:
+          port: 8080
+          deep: true
+
+        healthz:
+          port: 8081
+
+        tracing:
+          endpoint: rpc://otel-collector.observability.svc.cluster.local:4317
+          insecure: true
+
+        volumes:
+          items:
+            - name: keycloak-tls-cert
+              mountPath: /etc/ssl/certs
+              configMaps:
+                - keycloak-tls-cert
+              items: # details to mount the k8s configmap in the authorino pods
+                - key: keycloak.crt
+                  path: keycloak.crt
+          defaultMode: 420
+      ```
+
+      ### Cluster-wide vs Namespaced
+
+      Namespaced instances only watch auth resources (`AuthConfig` and `Secrets`) created in the same namespace as the Authorino service. Use this mode for dedicated instances that do not require elevated privileges.
+
+      Cluster-wide instances watch resources across the entire cluster (all namespaces.) Deploying and running Authorino in this mode requires elevated privileges.
+
+      ### Multi-tenancy
+
+      Use the `authConfigLabelSelectors` field of the `Authorino` custom resource to narrow the scope of the Authorino instance.
+
+      Only `AuthConfig` custom resources whose labels match the value of this field will be handled by the Authorino instance.
+
+      ## Protect a host
+
+      To protect a host, create an `AuthConfig` custom resource for the host. E.g.:
+
+      ```yaml
+      apiVersion: authorino.kuadrant.io/v1beta2
+      kind: AuthConfig
+      metadata:
+        name: my-api-protection
+      spec:
+        hosts:
+        - my-api.io
+
+        authentication:
+          "keycloak":
+            jwt:
+              issuerUrl: https://keycloak.keycloak.svc.cluster.local:8080/realms/my-realm
+
+        authorization:
+          "k8s-rbac":
+            kubernetesSubjectAccessReview:
+              user:
+                selector: auth.identity.user.username
+              resourceAttributes:
+                resource:
+                  value: my-api
+                verb:
+                  selector: request.method
+            cache:
+              key:
+                selector: auth.identity.user.username
+              ttl: 30
+          "after-2am-only":
+            rego: |
+              allow {
+                [hour, _, _] := time.clock(time.now_ns())
+                hour >= 2
+              }
+      ```
+
+      Make sure all requests to the host are fisrt checked with the Authorino instance, by configuring an Envoy proxy for external authz:
+
+      ```yaml
+      clusters:
+      - name: my-api
+        …
+      - name: authorino
+        connect_timeout: 0.25s
+        type: STRICT_DNS
+        lb_policy: ROUND_ROBIN
+        http2_protocol_options: {}
+        load_assignment:
+          cluster_name: authorino
+          endpoints:
+          - lb_endpoints:
+            - endpoint:
+                address:
+                  socket_address:
+                    address: authorino-authorino-authorization
+                    port_value: 50051
+      listeners:
+      - filter_chains:
+        - filters:
+          name: envoy.http_connection_manager
+          typed_config:
+            "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+            use_remote_address: true
+            route_config:
+              name: my-api-config
+              virtual_hosts:
+              - name: my-api-vs
+                domains:
+                - my-api.io
+                routes:
+                - match:
+                    prefix: /
+                  route:
+                    cluster: my-api
+            http_filters:
+            - name: envoy.filters.http.ext_authz
+              typed_config:
+                "@type": type.googleapis.com/envoy.extensions.filters.http.ext_authz.v3.ExtAuthz
+                transport_api_version: V3
+                failure_mode_allow: false
+                include_peer_certificate: true
+                grpc_service:
+                  envoy_grpc:
+                    cluster_name: authorino
+                  timeout: 1s
+      ```
+
+      ...or, if using Istio, by creating an [`AuthorizationPolicy`](https://istio.io/latest/docs/reference/config/security/authorization-policy/#AuthorizationPolicy) custom resource. Use `action: CUSTOM` in the resource and the Authorino authorization service configured in the mesh extension provider settings.
+
+      ## Features
+
+      **Authentication**
+
+      * JWT validation (with OpenID Connect Discovery)
+      * OAuth 2.0 Token Introspection (opaque tokens)
+      * Kubernetes TokenReview (ServiceAccount tokens)
+      * API key authentication
+      * X.509 client certificate authentication
+      * Anonymous access
+      * Proxy-handled (authentication performed by the proxy)
+
+      **Authorization**
+
+      * Built-in simple pattern matching (e.g. JWT claims, request attributes checking)
+      * OPA policies (inline Rego and fetch from external registry)
+      * Kubernetes SubjectAccessReview (resource and non-resource attributes)
+      * Authzed SpiceDB
+
+      **External metadata**
+
+      * HTTP request
+      * OpenID Connect User Info
+      * UMA-protected resource attributes
+
+      **Custom responses**
+
+      * Header injection (Festival Wristbands tokens, JSON, plain text)
+      * Envoy Dynamic Metadata
+      * Custom HTTP response (status code, headers, messages, body, etc)
+
+      **Callbacks**
+
+      * HTTP webhooks
+
+      **Caching**
+
+      * OpenID Connect and User-Managed Access configs
+      * JSON Web Keys (JWKs) and JSON Web Key Sets (JWKS)
+      * Access tokens
+      * External metadata
+      * Precompiled Rego policies
+      * Policy evaluation
+
+      Check out the full [Feature Specification](https://docs.kuadrant.io/authorino/docs/features/) and how-to guides in the [Kuadrant Docs](https://docs.kuadrant.io) website.
+    displayName: Red Hat - Authorino (Technical Preview)
+    installModes:
+    - supported: false
+      type: OwnNamespace
+    - supported: false
+      type: SingleNamespace
+    - supported: false
+      type: MultiNamespace
+    - supported: true
+      type: AllNamespaces
+    keywords:
+    - Authorino
+    - Authorino Operator
+    - Kuadrant
+    - Authorization
+    - Authentication
+    labels:
+      operatorframework.io/arch.amd64: supported
+      operatorframework.io/arch.arm64: supported
+      operatorframework.io/arch.ppc64le: supported
+      operatorframework.io/arch.s390x: supported
+      operatorframework.io/os.linux: supported
+    links:
+    - name: GitHub
+      url: https://github.com/kuadrant/authorino-operator
+    - name: Documentation
+      url: https://docs.kuadrant.io/authorino
+    maintainers:
+    - email: dcesare@redhat.com
+      name: Didier Di Cesare
+    - email: eastizle@redhat.com
+      name: Eguzki Astiz Lezaun
+    - email: mcassola@redhat.com
+      name: Guilherme Cassolato
+    maturity: alpha
+    minKubeVersion: 1.25.0
+    provider:
+      name: Red Hat
+relatedImages:
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:eb574781cf39917f8f5d9e5c806f520534601f819ee1ebcbb751832da8938008
+  name: authorino-rhel9-operator-eb574781cf39917f8f5d9e5c806f520534601f819ee1ebcbb751832da8938008-annotation
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9-operator@sha256:eb574781cf39917f8f5d9e5c806f520534601f819ee1ebcbb751832da8938008
+  name: manager
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9@sha256:a473dae20e71e3e813ac30ba978f2ab3c5e19d7d39b501ae9103dca892107c87
+  name: webhooks
+- image: registry.redhat.io/3scale-tech-preview/authorino-rhel9@sha256:a473dae20e71e3e813ac30ba978f2ab3c5e19d7d39b501ae9103dca892107c87
+  name: authorino
+- image: registry.redhat.io/openshift4/ose-cli-rhel9@sha256:3a398158d10018bfac5df291d6998b513cf9a30e5477bcaefddcf66d229627c7
+  name: migrator
+- image: registry.redhat.io//3scale-tech-preview/authorino-operator-bundle@sha256:75cb78f7a40d3daedbc11cbbb5505e029328b4120f0de11d4f6423de943e92d8
+  name: ""
+schema: olm.bundle
+---
+image: registry.redhat.io//rhcl-1/authorino-operator-bundle@sha256:53c9c8c0f212aff719d39565b8aa60523508936d9e313a3af545a47dbda87a34
+name: authorino-operator.v1.2.1
+package: authorino-operator
+properties:
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta2
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta3
+- type: olm.gvk
+  value:
+    group: operator.authorino.kuadrant.io
+    kind: Authorino
+    version: v1beta1
+- type: olm.package
+  value:
+    packageName: authorino-operator
+    version: 1.2.1
+- type: olm.csv.metadata
+  value:
+    annotations:
+      alm-examples: |-
+        [
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta2",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "authentication": {
+                "api-key-users": {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "authorizationHeader": {
+                      "prefix": "APIKEY"
+                    }
+                  }
+                }
+              },
+              "hosts": [
+                "my-api.io"
+              ]
+            }
+          },
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta3",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "authentication": {
+                "api-key-users": {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "authorizationHeader": {
+                      "prefix": "APIKEY"
+                    }
+                  }
+                }
+              },
+              "hosts": [
+                "my-api.io"
+              ]
+            }
+          },
+          {
+            "apiVersion": "operator.authorino.kuadrant.io/v1beta1",
+            "kind": "Authorino",
+            "metadata": {
+              "name": "authorino-sample"
+            },
+            "spec": {
+              "listener": {
+                "tls": {
+                  "enabled": false
+                }
+              },
+              "oidcServer": {
+                "tls": {
+                  "enabled": false
+                }
+              }
+            }
+          }
+        ]
+      capabilities: Basic Install
+      categories: Integration & Delivery
+      containerImage: registry.redhat.io/rhcl-1/authorino-rhel9-operator@sha256:50d6ef0484b4d6f30fd12a14461d999ab88e3345a3e7132906428636d3b91ba8
+      createdAt: "2025-02-25T14:17:46Z"
+      description: Enables authentication and authorization for Gateways and applications
+        in a Gateway API network.
+      features.operators.openshift.io/disconnected: "false"
+      features.operators.openshift.io/fips-compliant: "false"
+      features.operators.openshift.io/proxy-aware: "false"
+      features.operators.openshift.io/tls-profiles: "false"
+      features.operators.openshift.io/token-auth-aws: "false"
+      features.operators.openshift.io/token-auth-azure: "false"
+      features.operators.openshift.io/token-auth-gcp: "false"
+      operators.openshift.io/valid-subscription: '["Red Hat Connectivity Link"]'
+      operators.operatorframework.io/builder: operator-sdk-v1.32.0
+      operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
+      repository: https://github.com/Kuadrant/authorino-operator
+      support: kuadrant
+      tectonic-visibility: ocs
+    apiServiceDefinitions: {}
+    crdDescriptions:
+      owned:
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta2
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta3
+      - description: API to create instances of authorino
+        displayName: Authorino
+        kind: Authorino
+        name: authorinos.operator.authorino.kuadrant.io
+        version: v1beta1
+    description: |-
+      [Authorino](https://docs.kuadrant.io/authorino/) is Red Hat's Kubernetes-native lightweight external authorization service for tailor-made Zero Trust API security.
+
+      Install this Red Hat official distribution of [Authorino Operator](https://docs.kuadrant.io/authorino-operator/) to manage instances of Authorino in this cluster.
+
+      The current state of this distribution of the operator is: **Generally Available**.
+
+      The Community version of Authorino Operator, based on upstream public images, is available in [OperatorHub.io](https://operatorhub.io/operator/authorino-operator).
+
+      ## Getting started
+
+      After installing the Operator, request an instance of the external authorization service by creating an `Authorino` custom resource.
+
+      **Minimal example (namespaced)**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        listener:
+          tls:
+            enabled: false
+        oidcServer:
+          tls:
+            enabled: false
+      ```
+
+      **Extended example**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        clusterWide: true
+        authConfigLabelSelectors: environment=production
+        secretLabelSelectors: authorino.kuadrant.io/component=authorino,environment=production
+
+        replicas: 2
+
+        evaluatorCacheSize: 2 # mb
+
+        logLevel: info
+        logMode: production
+
+        listener:
+          ports:
+            grpc: 50001
+            http: 5001
+          tls:
+            certSecretRef:
+              name: authorino-server-cert # secret must contain `tls.crt` and `tls.key` entries
+          timeout: 2
+
+        oidcServer:
+          port: 8083
+          tls:
+            certSecretRef:
+              name: authorino-oidc-server-cert # secret must contain `tls.crt` and `tls.key` entries
+
+        metrics:
+          port: 8080
+          deep: true
+
+        healthz:
+          port: 8081
+
+        tracing:
+          endpoint: rpc://otel-collector.observability.svc.cluster.local:4317
+          insecure: true
+
+        volumes:
+          items:
+            - name: keycloak-tls-cert
+              mountPath: /etc/ssl/certs
+              configMaps:
+                - keycloak-tls-cert
+              items: # details to mount the k8s configmap in the authorino pods
+                - key: keycloak.crt
+                  path: keycloak.crt
+          defaultMode: 420
+      ```
+
+      ### Cluster-wide vs Namespaced
+
+      Namespaced instances only watch auth resources (`AuthConfig` and `Secrets`) created in the same namespace as the Authorino service. Use this mode for dedicated instances that do not require elevated privileges.
+
+      Cluster-wide instances watch resources across the entire cluster (all namespaces.) Deploying and running Authorino in this mode requires elevated privileges.
+
+      ### Multi-tenancy
+
+      Use the `authConfigLabelSelectors` field of the `Authorino` custom resource to narrow the scope of the Authorino instance.
+
+      Only `AuthConfig` custom resources whose labels match the value of this field will be handled by the Authorino instance.
+
+      ## Protect a host
+
+      To protect a host, create an `AuthConfig` custom resource for the host. E.g.:
+
+      ```yaml
+      apiVersion: authorino.kuadrant.io/v1beta3
+      kind: AuthConfig
+      metadata:
+        name: my-api-protection
+      spec:
+        hosts:
+        - my-api.io
+
+        authentication:
+          "keycloak":
+            jwt:
+              issuerUrl: https://keycloak.keycloak.svc.cluster.local:8080/realms/my-realm
+
+        authorization:
+          "k8s-rbac":
+            kubernetesSubjectAccessReview:
+              user:
+                selector: auth.identity.user.username
+              resourceAttributes:
+                resource:
+                  value: my-api
+                verb:
+                  selector: request.method
+            cache:
+              key:
+                selector: auth.identity.user.username
+              ttl: 30
+          "after-2am-only":
+            rego: |
+              allow {
+                [hour, _, _] := time.clock(time.now_ns())
+                hour >= 2
+              }
+      ```
+
+      Make sure all requests to the host are fisrt checked with the Authorino instance, by configuring an Envoy proxy for external authz:
+
+      ```yaml
+      clusters:
+      - name: my-api
+        …
+      - name: authorino
+        connect_timeout: 0.25s
+        type: STRICT_DNS
+        lb_policy: ROUND_ROBIN
+        http2_protocol_options: {}
+        load_assignment:
+          cluster_name: authorino
+          endpoints:
+          - lb_endpoints:
+            - endpoint:
+                address:
+                  socket_address:
+                    address: authorino-authorino-authorization
+                    port_value: 50051
+      listeners:
+      - filter_chains:
+        - filters:
+          name: envoy.http_connection_manager
+          typed_config:
+            "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+            use_remote_address: true
+            route_config:
+              name: my-api-config
+              virtual_hosts:
+              - name: my-api-vs
+                domains:
+                - my-api.io
+                routes:
+                - match:
+                    prefix: /
+                  route:
+                    cluster: my-api
+            http_filters:
+            - name: envoy.filters.http.ext_authz
+              typed_config:
+                "@type": type.googleapis.com/envoy.extensions.filters.http.ext_authz.v3.ExtAuthz
+                transport_api_version: V3
+                failure_mode_allow: false
+                include_peer_certificate: true
+                grpc_service:
+                  envoy_grpc:
+                    cluster_name: authorino
+                  timeout: 1s
+      ```
+
+      ...or, if using Istio, by creating an [`AuthorizationPolicy`](https://istio.io/latest/docs/reference/config/security/authorization-policy/#AuthorizationPolicy) custom resource. Use `action: CUSTOM` in the resource and the Authorino authorization service configured in the mesh extension provider settings.
+
+      ## Features
+
+      **Authentication**
+
+      * JWT validation (with OpenID Connect Discovery)
+      * OAuth 2.0 Token Introspection (opaque tokens)
+      * Kubernetes TokenReview (ServiceAccount tokens)
+      * API key authentication
+      * X.509 client certificate authentication
+      * Anonymous access
+      * Proxy-handled (authentication performed by the proxy)
+
+      **Authorization**
+
+      * Built-in simple pattern matching (e.g. JWT claims, request attributes checking)
+      * OPA policies (inline Rego and fetch from external registry)
+      * Kubernetes SubjectAccessReview (resource and non-resource attributes)
+      * Authzed SpiceDB
+
+      **External metadata**
+
+      * HTTP request
+      * OpenID Connect User Info
+      * UMA-protected resource attributes
+
+      **Custom responses**
+
+      * Header injection (Festival Wristbands tokens, JSON, plain text)
+      * Envoy Dynamic Metadata
+      * Custom HTTP response (status code, headers, messages, body, etc)
+
+      **Callbacks**
+
+      * HTTP webhooks
+
+      **Caching**
+
+      * OpenID Connect and User-Managed Access configs
+      * JSON Web Keys (JWKs) and JSON Web Key Sets (JWKS)
+      * Access tokens
+      * External metadata
+      * Precompiled Rego policies
+      * Policy evaluation
+
+      Check out the full [Feature Specification](https://docs.kuadrant.io/authorino/docs/features/) and how-to guides in the [Kuadrant Docs](https://docs.kuadrant.io) website.
+    displayName: Red Hat - Authorino Operator
+    installModes:
+    - supported: false
+      type: OwnNamespace
+    - supported: false
+      type: SingleNamespace
+    - supported: false
+      type: MultiNamespace
+    - supported: true
+      type: AllNamespaces
+    keywords:
+    - Authorino
+    - Authorino Operator
+    - Kuadrant
+    - Authorization
+    - Authentication
+    labels:
+      operatorframework.io/arch.amd64: supported
+      operatorframework.io/arch.arm64: supported
+      operatorframework.io/arch.ppc64le: supported
+      operatorframework.io/arch.s390x: supported
+      operatorframework.io/os.linux: supported
+    links:
+    - name: GitHub
+      url: https://github.com/kuadrant/authorino-operator
+    - name: Documentation
+      url: https://docs.kuadrant.io/authorino
+    maintainers:
+    - email: dcesare@redhat.com
+      name: Didier Di Cesare
+    - email: eastizle@redhat.com
+      name: Eguzki Astiz Lezaun
+    - email: mcassola@redhat.com
+      name: Guilherme Cassolato
+    maturity: alpha
+    minKubeVersion: 1.25.0
+    provider:
+      name: Red Hat
+relatedImages:
+- image: registry.redhat.io/rhcl-1/authorino-rhel9-operator@sha256:50d6ef0484b4d6f30fd12a14461d999ab88e3345a3e7132906428636d3b91ba8
+  name: authorino-rhel9-operator-50d6ef0484b4d6f30fd12a14461d999ab88e3345a3e7132906428636d3b91ba8-annotation
+- image: registry.redhat.io/rhcl-1/authorino-rhel9-operator@sha256:50d6ef0484b4d6f30fd12a14461d999ab88e3345a3e7132906428636d3b91ba8
+  name: authorino-operator
+- image: registry.redhat.io/rhcl-1/authorino-rhel9@sha256:4125b12ac239367626fdeaa9c2b4b905e2abb791c99b689a67498da7579a0ec0
+  name: authorino
+- image: registry.redhat.io//rhcl-1/authorino-operator-bundle@sha256:53c9c8c0f212aff719d39565b8aa60523508936d9e313a3af545a47dbda87a34
+  name: ""
+schema: olm.bundle
+---
+image: registry.redhat.io/rhcl-1/authorino-operator-bundle@sha256:7f3d41672fa8c60725304f0d45e468a4f01defcab7352501737ffddfd32edded
+name: authorino-operator.v1.2.2
+package: authorino-operator
+properties:
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta2
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta3
+- type: olm.gvk
+  value:
+    group: operator.authorino.kuadrant.io
+    kind: Authorino
+    version: v1beta1
+- type: olm.package
+  value:
+    packageName: authorino-operator
+    version: 1.2.2
+- type: olm.csv.metadata
+  value:
+    annotations:
+      alm-examples: |-
+        [
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta2",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "authentication": {
+                "api-key-users": {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "authorizationHeader": {
+                      "prefix": "APIKEY"
+                    }
+                  }
+                }
+              },
+              "hosts": [
+                "my-api.io"
+              ]
+            }
+          },
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta3",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "authentication": {
+                "api-key-users": {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "authorizationHeader": {
+                      "prefix": "APIKEY"
+                    }
+                  }
+                }
+              },
+              "hosts": [
+                "my-api.io"
+              ]
+            }
+          },
+          {
+            "apiVersion": "operator.authorino.kuadrant.io/v1beta1",
+            "kind": "Authorino",
+            "metadata": {
+              "name": "authorino-sample"
+            },
+            "spec": {
+              "listener": {
+                "tls": {
+                  "enabled": false
+                }
+              },
+              "oidcServer": {
+                "tls": {
+                  "enabled": false
+                }
+              }
+            }
+          }
+        ]
+      capabilities: Basic Install
+      categories: Integration & Delivery
+      containerImage: registry.redhat.io/rhcl-1/authorino-rhel9-operator@sha256:2d81613856df9725ad20928a7a9895d14482c42effce0a3a0de88f40ec35d411
+      createdAt: "2025-03-25T22:39:23Z"
+      description: Enables authentication and authorization for Gateways and applications
+        in a Gateway API network.
+      features.operators.openshift.io/disconnected: "false"
+      features.operators.openshift.io/fips-compliant: "false"
+      features.operators.openshift.io/proxy-aware: "false"
+      features.operators.openshift.io/tls-profiles: "false"
+      features.operators.openshift.io/token-auth-aws: "false"
+      features.operators.openshift.io/token-auth-azure: "false"
+      features.operators.openshift.io/token-auth-gcp: "false"
+      operators.openshift.io/valid-subscription: '["Red Hat Connectivity Link"]'
+      operators.operatorframework.io/builder: operator-sdk-v1.32.0
+      operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
+      repository: https://github.com/Kuadrant/authorino-operator
+      support: kuadrant
+      tectonic-visibility: ocs
+    apiServiceDefinitions: {}
+    crdDescriptions:
+      owned:
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta2
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta3
+      - description: API to create instances of authorino
+        displayName: Authorino
+        kind: Authorino
+        name: authorinos.operator.authorino.kuadrant.io
+        version: v1beta1
+    description: |-
+      [Authorino](https://docs.kuadrant.io/authorino/) is Red Hat's Kubernetes-native lightweight external authorization service for tailor-made Zero Trust API security.
+
+      Install this Red Hat official distribution of [Authorino Operator](https://docs.kuadrant.io/authorino-operator/) to manage instances of Authorino in this cluster.
+
+      The current state of this distribution of the operator is: **Generally Available**.
+
+      The Community version of Authorino Operator, based on upstream public images, is available in [OperatorHub.io](https://operatorhub.io/operator/authorino-operator).
+
+      ## Getting started
+
+      After installing the Operator, request an instance of the external authorization service by creating an `Authorino` custom resource.
+
+      **Minimal example (namespaced)**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        listener:
+          tls:
+            enabled: false
+        oidcServer:
+          tls:
+            enabled: false
+      ```
+
+      **Extended example**
+
+      ```yaml
+      apiVersion: operator.authorino.kuadrant.io/v1beta1
+      kind: Authorino
+      metadata:
+        name: authorino
+      spec:
+        clusterWide: true
+        authConfigLabelSelectors: environment=production
+        secretLabelSelectors: authorino.kuadrant.io/component=authorino,environment=production
+
+        replicas: 2
+
+        evaluatorCacheSize: 2 # mb
+
+        logLevel: info
+        logMode: production
+
+        listener:
+          ports:
+            grpc: 50001
+            http: 5001
+          tls:
+            certSecretRef:
+              name: authorino-server-cert # secret must contain `tls.crt` and `tls.key` entries
+          timeout: 2
+
+        oidcServer:
+          port: 8083
+          tls:
+            certSecretRef:
+              name: authorino-oidc-server-cert # secret must contain `tls.crt` and `tls.key` entries
+
+        metrics:
+          port: 8080
+          deep: true
+
+        healthz:
+          port: 8081
+
+        tracing:
+          endpoint: rpc://otel-collector.observability.svc.cluster.local:4317
+          insecure: true
+
+        volumes:
+          items:
+            - name: keycloak-tls-cert
+              mountPath: /etc/ssl/certs
+              configMaps:
+                - keycloak-tls-cert
+              items: # details to mount the k8s configmap in the authorino pods
+                - key: keycloak.crt
+                  path: keycloak.crt
+          defaultMode: 420
+      ```
+
+      ### Cluster-wide vs Namespaced
+
+      Namespaced instances only watch auth resources (`AuthConfig` and `Secrets`) created in the same namespace as the Authorino service. Use this mode for dedicated instances that do not require elevated privileges.
+
+      Cluster-wide instances watch resources across the entire cluster (all namespaces.) Deploying and running Authorino in this mode requires elevated privileges.
+
+      ### Multi-tenancy
+
+      Use the `authConfigLabelSelectors` field of the `Authorino` custom resource to narrow the scope of the Authorino instance.
+
+      Only `AuthConfig` custom resources whose labels match the value of this field will be handled by the Authorino instance.
+
+      ## Protect a host
+
+      To protect a host, create an `AuthConfig` custom resource for the host. E.g.:
+
+      ```yaml
+      apiVersion: authorino.kuadrant.io/v1beta3
+      kind: AuthConfig
+      metadata:
+        name: my-api-protection
+      spec:
+        hosts:
+        - my-api.io
+
+        authentication:
+          "keycloak":
+            jwt:
+              issuerUrl: https://keycloak.keycloak.svc.cluster.local:8080/realms/my-realm
+
+        authorization:
+          "k8s-rbac":
+            kubernetesSubjectAccessReview:
+              user:
+                selector: auth.identity.user.username
+              resourceAttributes:
+                resource:
+                  value: my-api
+                verb:
+                  selector: request.method
+            cache:
+              key:
+                selector: auth.identity.user.username
+              ttl: 30
+          "after-2am-only":
+            rego: |
+              allow {
+                [hour, _, _] := time.clock(time.now_ns())
+                hour >= 2
+              }
+      ```
+
+      Make sure all requests to the host are fisrt checked with the Authorino instance, by configuring an Envoy proxy for external authz:
+
+      ```yaml
+      clusters:
+      - name: my-api
+        …
+      - name: authorino
+        connect_timeout: 0.25s
+        type: STRICT_DNS
+        lb_policy: ROUND_ROBIN
+        http2_protocol_options: {}
+        load_assignment:
+          cluster_name: authorino
+          endpoints:
+          - lb_endpoints:
+            - endpoint:
+                address:
+                  socket_address:
+                    address: authorino-authorino-authorization
+                    port_value: 50051
+      listeners:
+      - filter_chains:
+        - filters:
+          name: envoy.http_connection_manager
+          typed_config:
+            "@type": type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager
+            use_remote_address: true
+            route_config:
+              name: my-api-config
+              virtual_hosts:
+              - name: my-api-vs
+                domains:
+                - my-api.io
+                routes:
+                - match:
+                    prefix: /
+                  route:
+                    cluster: my-api
+            http_filters:
+            - name: envoy.filters.http.ext_authz
+              typed_config:
+                "@type": type.googleapis.com/envoy.extensions.filters.http.ext_authz.v3.ExtAuthz
+                transport_api_version: V3
+                failure_mode_allow: false
+                include_peer_certificate: true
+                grpc_service:
+                  envoy_grpc:
+                    cluster_name: authorino
+                  timeout: 1s
+      ```
+
+      ...or, if using Istio, by creating an [`AuthorizationPolicy`](https://istio.io/latest/docs/reference/config/security/authorization-policy/#AuthorizationPolicy) custom resource. Use `action: CUSTOM` in the resource and the Authorino authorization service configured in the mesh extension provider settings.
+
+      ## Features
+
+      **Authentication**
+
+      * JWT validation (with OpenID Connect Discovery)
+      * OAuth 2.0 Token Introspection (opaque tokens)
+      * Kubernetes TokenReview (ServiceAccount tokens)
+      * API key authentication
+      * X.509 client certificate authentication
+      * Anonymous access
+      * Proxy-handled (authentication performed by the proxy)
+
+      **Authorization**
+
+      * Built-in simple pattern matching (e.g. JWT claims, request attributes checking)
+      * OPA policies (inline Rego and fetch from external registry)
+      * Kubernetes SubjectAccessReview (resource and non-resource attributes)
+      * Authzed SpiceDB
+
+      **External metadata**
+
+      * HTTP request
+      * OpenID Connect User Info
+      * UMA-protected resource attributes
+
+      **Custom responses**
+
+      * Header injection (Festival Wristbands tokens, JSON, plain text)
+      * Envoy Dynamic Metadata
+      * Custom HTTP response (status code, headers, messages, body, etc)
+
+      **Callbacks**
+
+      * HTTP webhooks
+
+      **Caching**
+
+      * OpenID Connect and User-Managed Access configs
+      * JSON Web Keys (JWKs) and JSON Web Key Sets (JWKS)
+      * Access tokens
+      * External metadata
+      * Precompiled Rego policies
+      * Policy evaluation
+
+      Check out the full [Feature Specification](https://docs.kuadrant.io/authorino/docs/features/) and how-to guides in the [Kuadrant Docs](https://docs.kuadrant.io) website.
+    displayName: Red Hat - Authorino Operator
+    installModes:
+    - supported: false
+      type: OwnNamespace
+    - supported: false
+      type: SingleNamespace
+    - supported: false
+      type: MultiNamespace
+    - supported: true
+      type: AllNamespaces
+    keywords:
+    - Authorino
+    - Authorino Operator
+    - Kuadrant
+    - Authorization
+    - Authentication
+    labels:
+      operatorframework.io/arch.amd64: supported
+      operatorframework.io/arch.arm64: supported
+      operatorframework.io/arch.ppc64le: supported
+      operatorframework.io/arch.s390x: supported
+      operatorframework.io/os.linux: supported
+    links:
+    - name: GitHub
+      url: https://github.com/kuadrant/authorino-operator
+    - name: Documentation
+      url: https://docs.kuadrant.io/authorino
+    maintainers:
+    - email: dcesare@redhat.com
+      name: Didier Di Cesare
+    - email: eastizle@redhat.com
+      name: Eguzki Astiz Lezaun
+    - email: mcassola@redhat.com
+      name: Guilherme Cassolato
+    maturity: alpha
+    minKubeVersion: 1.25.0
+    provider:
+      name: Red Hat
+relatedImages:
+- image: registry.redhat.io/rhcl-1/authorino-operator-bundle@sha256:7f3d41672fa8c60725304f0d45e468a4f01defcab7352501737ffddfd32edded
+  name: ""
+- image: registry.redhat.io/rhcl-1/authorino-rhel9-operator@sha256:2d81613856df9725ad20928a7a9895d14482c42effce0a3a0de88f40ec35d411
+  name: authorino-rhel9-operator-2d81613856df9725ad20928a7a9895d14482c42effce0a3a0de88f40ec35d411-annotation
+- image: registry.redhat.io/rhcl-1/authorino-rhel9-operator@sha256:2d81613856df9725ad20928a7a9895d14482c42effce0a3a0de88f40ec35d411
+  name: authorino-operator
+- image: registry.redhat.io/rhcl-1/authorino-rhel9@sha256:413d3796ad0101bf14d3341d31d9367e67fea1e73ebb3fb79124ef4c5dde0c09
+  name: authorino
+schema: olm.bundle
