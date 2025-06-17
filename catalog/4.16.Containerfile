@@ -3,7 +3,7 @@
 FROM quay.io/operator-framework/opm:latest as builder
 
 # Copy FBC root into image at /configs and pre-populate serve cache
-ADD 4.16 /configs
+ADD /catalog/4.16 /configs
 RUN ["/bin/opm", "serve", "/configs", "--cache-dir=/tmp/cache", "--cache-only"]
 
 FROM registry.redhat.io/openshift4/ose-operator-registry-rhel9:v4.16
