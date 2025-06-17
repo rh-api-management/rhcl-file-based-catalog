@@ -14,7 +14,7 @@ name: stable
 package: limitador-operator
 schema: olm.channel
 ---
-image: registry.redhat.io//rhcl-1/limitador-operator-bundle@sha256:1fa81c5cf9b184da51cdf9ff17039e5ca9a0c4d6a40d5a536368219b6b3794a3
+image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:1fa81c5cf9b184da51cdf9ff17039e5ca9a0c4d6a40d5a536368219b6b3794a3
 name: limitador-operator.v1.0.2
 package: limitador-operator
 properties:
@@ -129,7 +129,7 @@ relatedImages:
   name: manager
 - image: registry.redhat.io/rhcl-1/limitador-rhel9@sha256:0112e4478abe28486670bb1221b4039ca0b4bde314d72c28485008ea7d6f73c1
   name: limitador
-- image: registry.redhat.io//rhcl-1/limitador-operator-bundle@sha256:1fa81c5cf9b184da51cdf9ff17039e5ca9a0c4d6a40d5a536368219b6b3794a3
+- image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:1fa81c5cf9b184da51cdf9ff17039e5ca9a0c4d6a40d5a536368219b6b3794a3
   name: ""
 schema: olm.bundle
 ---
