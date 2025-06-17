@@ -18,7 +18,7 @@ name: stable
 package: dns-operator
 schema: olm.channel
 ---
-image: registry.redhat.io//rhcl-1/dns-operator-bundle@sha256:157d58f4ea62a34f6d4e9367014ff9d91e22a166158029a53f49550f9fe23159
+image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:157d58f4ea62a34f6d4e9367014ff9d91e22a166158029a53f49550f9fe23159
 name: dns-operator.v0.12.0
 package: dns-operator
 properties:
@@ -161,11 +161,11 @@ relatedImages:
   name: dns-rhel9-operator-4be50004c1f413377eb607674f9babe3575ef6c6dcab1af7fb7ca32f8ea89070-annotation
 - image: registry.redhat.io/rhcl-1/dns-rhel9-operator@sha256:4be50004c1f413377eb607674f9babe3575ef6c6dcab1af7fb7ca32f8ea89070
   name: manager
-- image: registry.redhat.io//rhcl-1/dns-operator-bundle@sha256:157d58f4ea62a34f6d4e9367014ff9d91e22a166158029a53f49550f9fe23159
+- image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:157d58f4ea62a34f6d4e9367014ff9d91e22a166158029a53f49550f9fe23159
   name: ""
 schema: olm.bundle
 ---
-image: registry.redhat.io//rhcl-1/dns-operator-bundle@sha256:09e38bc5cfe23aa1f2cca89d1b9ccb28c734c6bfdc4396e5fed84f1b99e8e3d5
+image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:09e38bc5cfe23aa1f2cca89d1b9ccb28c734c6bfdc4396e5fed84f1b99e8e3d5
 name: dns-operator.v1.0.1
 package: dns-operator
 properties:
@@ -308,11 +308,11 @@ relatedImages:
   name: dns-rhel9-operator-9095e4aa35d3a00ad35b764c1180aabf9b3ab0e7ac8a4fd8f536427ed71e6c88-annotation
 - image: registry.redhat.io/rhcl-1/dns-rhel9-operator@sha256:9095e4aa35d3a00ad35b764c1180aabf9b3ab0e7ac8a4fd8f536427ed71e6c88
   name: manager
-- image: registry.redhat.io//rhcl-1/dns-operator-bundle@sha256:09e38bc5cfe23aa1f2cca89d1b9ccb28c734c6bfdc4396e5fed84f1b99e8e3d5
+- image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:09e38bc5cfe23aa1f2cca89d1b9ccb28c734c6bfdc4396e5fed84f1b99e8e3d5
   name: ""
 schema: olm.bundle
 ---
-image: registry.redhat.io//rhcl-1/dns-operator-bundle@sha256:c50499b2fb80a588052fe40857a86f278112f219536140478fcb59fb5327f3d2
+image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:c50499b2fb80a588052fe40857a86f278112f219536140478fcb59fb5327f3d2
 name: dns-operator.v1.0.2
 package: dns-operator
 properties:
@@ -455,7 +455,7 @@ relatedImages:
   name: dns-rhel9-operator-d0ae52cff292ebf6cec0b4b3e84ea3a742b211a228c4a6a0bbd04c6e481e4686-annotation
 - image: registry.redhat.io/rhcl-1/dns-rhel9-operator@sha256:d0ae52cff292ebf6cec0b4b3e84ea3a742b211a228c4a6a0bbd04c6e481e4686
   name: manager
-- image: registry.redhat.io//rhcl-1/dns-operator-bundle@sha256:c50499b2fb80a588052fe40857a86f278112f219536140478fcb59fb5327f3d2
+- image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:c50499b2fb80a588052fe40857a86f278112f219536140478fcb59fb5327f3d2
   name: ""
 schema: olm.bundle
 ---

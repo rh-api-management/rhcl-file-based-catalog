@@ -14,7 +14,7 @@ name: stable
 package: rhcl-operator
 schema: olm.channel
 ---
-image: registry.redhat.io//rhcl-1/rhcl-operator-bundle@sha256:ab36a39fec27a77a4f559e104284bfdf17462451dca3f060d07ce5f234b41b6d
+image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:ab36a39fec27a77a4f559e104284bfdf17462451dca3f060d07ce5f234b41b6d
 name: rhcl-operator.v1.0.2
 package: rhcl-operator
 properties:
@@ -266,7 +266,7 @@ relatedImages:
   name: manager
 - image: registry.redhat.io/rhcl-1/wasm-shim-rhel9@sha256:458a5ff405922b20142416993f486d22ea23d375f9ef4fc239a42f00649129e4
   name: wasmshim
-- image: registry.redhat.io//rhcl-1/rhcl-operator-bundle@sha256:ab36a39fec27a77a4f559e104284bfdf17462451dca3f060d07ce5f234b41b6d
+- image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:ab36a39fec27a77a4f559e104284bfdf17462451dca3f060d07ce5f234b41b6d
   name: ""
 schema: olm.bundle
 ---

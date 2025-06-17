@@ -19,7 +19,7 @@ name: stable
 package: rhcl-operator
 schema: olm.channel
 ---
-image: registry.redhat.io//rhcl-1/rhcl-operator-bundle@sha256:bf581c1c76e43f02873549f9358aafcb67db232193e541ea6e7e132d6c9eec76
+image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:bf581c1c76e43f02873549f9358aafcb67db232193e541ea6e7e132d6c9eec76
 name: rhcl-operator.v1.0.0
 package: rhcl-operator
 properties:
@@ -271,11 +271,11 @@ relatedImages:
   name: manager
 - image: registry.redhat.io/rhcl-1/wasm-shim-rhel9@sha256:9dd129d64b87f513855130f89b9ade3507f92ce5223aa173eb608235b4255db7
   name: wasmshim
-- image: registry.redhat.io//rhcl-1/rhcl-operator-bundle@sha256:bf581c1c76e43f02873549f9358aafcb67db232193e541ea6e7e132d6c9eec76
+- image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:bf581c1c76e43f02873549f9358aafcb67db232193e541ea6e7e132d6c9eec76
   name: ""
 schema: olm.bundle
 ---
-image: registry.redhat.io//rhcl-1/rhcl-operator-bundle@sha256:169348e0d825ef7545ce452cf68df7e8ff86a7fbe25ac774c657669ea2e6209f
+image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:169348e0d825ef7545ce452cf68df7e8ff86a7fbe25ac774c657669ea2e6209f
 name: rhcl-operator.v1.0.1
 package: rhcl-operator
 properties:
@@ -527,11 +527,11 @@ relatedImages:
   name: manager
 - image: registry.redhat.io/rhcl-1/wasm-shim-rhel9@sha256:458a5ff405922b20142416993f486d22ea23d375f9ef4fc239a42f00649129e4
   name: wasmshim
-- image: registry.redhat.io//rhcl-1/rhcl-operator-bundle@sha256:169348e0d825ef7545ce452cf68df7e8ff86a7fbe25ac774c657669ea2e6209f
+- image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:169348e0d825ef7545ce452cf68df7e8ff86a7fbe25ac774c657669ea2e6209f
   name: ""
 schema: olm.bundle
 ---
-image: registry.redhat.io//rhcl-1/rhcl-operator-bundle@sha256:3a9013550f546a1c57ed0459a26a8df2f87f36949b256d1bd269d728d00be5ee
+image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:3a9013550f546a1c57ed0459a26a8df2f87f36949b256d1bd269d728d00be5ee
 name: rhcl-operator.v1.0.2
 package: rhcl-operator
 properties:
@@ -783,7 +783,7 @@ relatedImages:
   name: manager
 - image: registry.redhat.io/rhcl-1/wasm-shim-rhel9@sha256:458a5ff405922b20142416993f486d22ea23d375f9ef4fc239a42f00649129e4
   name: wasmshim
-- image: registry.redhat.io//rhcl-1/rhcl-operator-bundle@sha256:3a9013550f546a1c57ed0459a26a8df2f87f36949b256d1bd269d728d00be5ee
+- image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:3a9013550f546a1c57ed0459a26a8df2f87f36949b256d1bd269d728d00be5ee
   name: ""
 schema: olm.bundle
 ---
