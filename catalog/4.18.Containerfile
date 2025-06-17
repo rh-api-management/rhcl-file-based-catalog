@@ -6,7 +6,7 @@ FROM quay.io/operator-framework/opm:latest as builder
 ADD 4.18 /configs
 RUN ["/bin/opm", "serve", "/configs", "--cache-dir=/tmp/cache", "--cache-only"]
 
-FROM registry.redhat.io/openshift4/ose-operator-registry-rhel9:v4.18
+FROM registry.redhat.io/openshift4/ose-operator-registry-rhel9:v4.19
 # The base image is expected to contain
 # /bin/opm (with serve subcommand) and /bin/grpc_health_probe
 
