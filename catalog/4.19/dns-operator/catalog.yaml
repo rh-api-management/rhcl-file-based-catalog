@@ -303,3 +303,150 @@ relatedImages:
   - image: registry.redhat.io/rhcl-1/dns-rhel9-operator@sha256:8ad3876e36ba2f76355499d98a97672f54f26754fc9d219d9cb1c5b9f9874430
     name: manager
 schema: olm.bundle
+
+---
+image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:b430bb6e5f49278f980ec88d90b0349f81657c4ce70f50faecc663a2a71c0886
+name: dns-operator.v1.1.1
+package: dns-operator
+properties:
+- type: olm.gvk
+  value:
+    group: kuadrant.io
+    kind: DNSHealthCheckProbe
+    version: v1alpha1
+- type: olm.gvk
+  value:
+    group: kuadrant.io
+    kind: DNSRecord
+    version: v1alpha1
+- type: olm.package
+  value:
+    packageName: dns-operator
+    version: 1.1.1
+- type: olm.csv.metadata
+  value:
+    annotations:
+      alm-examples: |-
+        [
+          {
+            "apiVersion": "kuadrant.io/v1alpha1",
+            "kind": "DNSHealthCheckProbe",
+            "metadata": {
+              "name": "$NAME"
+            },
+            "spec": {
+              "additionalHeadersRef": {
+                "name": "headers"
+              },
+              "address": "192.168.0.16",
+              "allowInsecureCertificate": true,
+              "failureThreshold": 5,
+              "hostname": "test.com",
+              "interval": "60s",
+              "path": "/healthz",
+              "port": 443,
+              "protocol": "HTTPS"
+            }
+          },
+          {
+            "apiVersion": "kuadrant.io/v1alpha1",
+            "kind": "DNSRecord",
+            "metadata": {
+              "labels": {
+                "app.kubernetes.io/created-by": "dns-operator",
+                "app.kubernetes.io/instance": "dnsrecord-sample",
+                "app.kubernetes.io/managed-by": "kustomize",
+                "app.kubernetes.io/name": "dnsrecord",
+                "app.kubernetes.io/part-of": "dns-operator"
+              },
+              "name": "dnsrecord-sample"
+            },
+            "spec": {
+              "endpoints": [
+                {
+                  "dnsName": "dnsrecord-simple.example.com",
+                  "recordTTL": 60,
+                  "recordType": "A",
+                  "targets": [
+                    "52.215.108.61",
+                    "52.30.101.221"
+                  ]
+                }
+              ],
+              "providerRef": {
+                "name": "dns-provider-creds"
+              }
+            }
+          }
+        ]
+      capabilities: Basic Install
+      categories: Integration & Delivery
+      containerImage: registry.redhat.io/rhcl-1/dns-rhel9-operator@sha256:067fddf572cdd3c9f3b551f6310b984cf75e444c21f27954b17f586239b9f5d8
+      createdAt: 25 Sep 2025, 13:03
+      description: Configures how north-south traffic from outside the network is
+        balanced and reaches Gateways.
+      features.operators.openshift.io/cnf: "false"
+      features.operators.openshift.io/cni: "false"
+      features.operators.openshift.io/csi: "false"
+      features.operators.openshift.io/disconnected: "true"
+      features.operators.openshift.io/fips-compliant: "false"
+      features.operators.openshift.io/proxy-aware: "false"
+      features.operators.openshift.io/tls-profiles: "false"
+      features.operators.openshift.io/token-auth-aws: "false"
+      features.operators.openshift.io/token-auth-azure: "false"
+      features.operators.openshift.io/token-auth-gcp: "false"
+      operators.openshift.io/valid-subscription: '["Red Hat Connectivity Link"]'
+      operators.operatorframework.io/builder: operator-sdk-v1.33.0
+      operators.operatorframework.io/project_layout: go.kubebuilder.io/v4
+      repository: https://github.com/kuadrant/dns-operator
+      support: kuadrant
+    apiServiceDefinitions: {}
+    crdDescriptions:
+      owned:
+      - description: DNSHealthCheckProbe is the Schema for the dnshealthcheckprobes
+          API
+        displayName: DNSHealthCheckProbe
+        kind: DNSHealthCheckProbe
+        name: dnshealthcheckprobes.kuadrant.io
+        version: v1alpha1
+      - description: DNSRecord is the Schema for the dnsrecords API
+        displayName: DNSRecord
+        kind: DNSRecord
+        name: dnsrecords.kuadrant.io
+        version: v1alpha1
+    description: A Kubernetes Operator to manage the lifecycle of DNS resources
+    displayName: DNS Operator
+    installModes:
+    - supported: false
+      type: OwnNamespace
+    - supported: false
+      type: SingleNamespace
+    - supported: false
+      type: MultiNamespace
+    - supported: true
+      type: AllNamespaces
+    keywords:
+    - dns
+    - kuadrant
+    labels:
+      operatorframework.io/os.linux: supported
+    links:
+    - name: DNS Operator
+      url: https://github.com/Kuadrant/dns-operator
+    maintainers:
+    - email: mnairn@redhat.com
+      name: Michael Nairn
+    - email: pbrookes@redhat.com
+      name: Phil Brookes
+    - email: cbrookes@redhat.com
+      name: Craig Brookes
+    maturity: alpha
+    minKubeVersion: 1.8.0
+    provider:
+      name: Red Hat
+relatedImages:
+- image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:b430bb6e5f49278f980ec88d90b0349f81657c4ce70f50faecc663a2a71c0886
+  name: ""
+- image: registry.redhat.io/rhcl-1/dns-rhel9-operator@sha256:067fddf572cdd3c9f3b551f6310b984cf75e444c21f27954b17f586239b9f5d8
+  name: ""
+schema: olm.bundle
