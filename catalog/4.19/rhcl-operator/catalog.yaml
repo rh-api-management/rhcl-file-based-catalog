@@ -515,7 +515,7 @@ relatedImages:
 schema: olm.bundle
 
 ---
-image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:99a18329cd9d30a7c20a438eafda22271de201e9e788d8e5a63adbf4d2fb05a6
+image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:c024b855f762f7ef36bcc898f3f9dd48f3918cc4f1c042837aa409a8c8efd531
 name: rhcl-operator.v1.1.1
 package: rhcl-operator
 properties:
@@ -670,7 +670,7 @@ properties:
       capabilities: Basic Install
       categories: Integration & Delivery
       containerImage: registry.redhat.io/rhcl-1/rhcl-rhel9-operator@sha256:03173a1b44ddcea2d7a6c8a2d41fad57119eb4fa145934b3fc5330686f0ad2f2
-      createdAt: 25 Sep 2025, 13:58
+      createdAt: 21 Oct 2025, 10:24
       description: Red Hat Connectivity Link enables you to secure, protect, and connect
         your APIs and applications in multicluster, multicloud, and hybrid cloud environments
       features.operators.openshift.io/cnf: "false"
@@ -764,9 +764,9 @@ properties:
 relatedImages:
 - image: registry.access.redhat.com/rhcl-1/wasm-shim-rhel9@sha256:dac231c8c5b7e5da9482bbafd97c5e09fff5a2421af11284f2d57b8f831f07ef
   name: wasmshim
-- image: registry.redhat.io/rhcl-1/rhcl-console-plugin-rhel9@sha256:c693234c1dc0c3915a4cb306c4236c3d5cb194898b75c8313bec230d4ea5b90d
+- image: registry.redhat.io/rhcl-1/rhcl-console-plugin-rhel9@sha256:58fb41c7a1950cd593b8644687ffd751cfb70404246321935d0ff009f2a9ac91
   name: consoleplugin
-- image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:99a18329cd9d30a7c20a438eafda22271de201e9e788d8e5a63adbf4d2fb05a6
+- image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:c024b855f762f7ef36bcc898f3f9dd48f3918cc4f1c042837aa409a8c8efd531
   name: ""
 - image: registry.redhat.io/rhcl-1/rhcl-rhel9-operator@sha256:03173a1b44ddcea2d7a6c8a2d41fad57119eb4fa145934b3fc5330686f0ad2f2
   name: ""

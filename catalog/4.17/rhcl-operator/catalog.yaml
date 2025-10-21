@@ -1018,7 +1018,7 @@ relatedImages:
 schema: olm.bundle
 
 ---
-image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:99a18329cd9d30a7c20a438eafda22271de201e9e788d8e5a63adbf4d2fb05a6
+image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:c024b855f762f7ef36bcc898f3f9dd48f3918cc4f1c042837aa409a8c8efd531
 name: rhcl-operator.v1.1.1
 package: rhcl-operator
 properties:
@@ -1173,8 +1173,9 @@ properties:
       capabilities: Basic Install
       categories: Integration & Delivery
       containerImage: registry.redhat.io/rhcl-1/rhcl-rhel9-operator@sha256:03173a1b44ddcea2d7a6c8a2d41fad57119eb4fa145934b3fc5330686f0ad2f2
-      createdAt: 25 Sep 2025, 13:58
-      description: Red Hat Connectivity Link enables you to secure, protect, and connect
+      createdAt: 21 Oct 2025, 10:24
+      description:
+        Red Hat Connectivity Link enables you to secure, protect, and connect
         your APIs and applications in multicluster, multicloud, and hybrid cloud environments
       features.operators.openshift.io/cnf: "false"
       features.operators.openshift.io/cni: "false"
@@ -1194,83 +1195,88 @@ properties:
     apiServiceDefinitions: {}
     crdDescriptions:
       owned:
-      - description: AuthPolicy enables authentication and authorization for service
-          workloads in a Gateway API network
-        displayName: AuthPolicy
-        kind: AuthPolicy
-        name: authpolicies.kuadrant.io
-        version: v1
-      - description: DNSPolicy configures how North-South based traffic should be
-          balanced and reach the gateways
-        displayName: DNSPolicy
-        kind: DNSPolicy
-        name: dnspolicies.kuadrant.io
-        version: v1
-      - description: Kuadrant configures installations of Kuadrant Service Protection
-          components
-        displayName: Kuadrant
-        kind: Kuadrant
-        name: kuadrants.kuadrant.io
-        version: v1beta1
-      - description: RateLimitPolicy enables rate limiting for service workloads in
-          a Gateway API network
-        displayName: RateLimitPolicy
-        kind: RateLimitPolicy
-        name: ratelimitpolicies.kuadrant.io
-        version: v1
-      - description: TLSPolicy provides tls for gateway listeners by managing the
-          lifecycle of tls certificates
-        displayName: TLSPolicy
-        kind: TLSPolicy
-        name: tlspolicies.kuadrant.io
-        version: v1
+        - description:
+            AuthPolicy enables authentication and authorization for service
+            workloads in a Gateway API network
+          displayName: AuthPolicy
+          kind: AuthPolicy
+          name: authpolicies.kuadrant.io
+          version: v1
+        - description:
+            DNSPolicy configures how North-South based traffic should be
+            balanced and reach the gateways
+          displayName: DNSPolicy
+          kind: DNSPolicy
+          name: dnspolicies.kuadrant.io
+          version: v1
+        - description:
+            Kuadrant configures installations of Kuadrant Service Protection
+            components
+          displayName: Kuadrant
+          kind: Kuadrant
+          name: kuadrants.kuadrant.io
+          version: v1beta1
+        - description:
+            RateLimitPolicy enables rate limiting for service workloads in
+            a Gateway API network
+          displayName: RateLimitPolicy
+          kind: RateLimitPolicy
+          name: ratelimitpolicies.kuadrant.io
+          version: v1
+        - description:
+            TLSPolicy provides tls for gateway listeners by managing the
+            lifecycle of tls certificates
+          displayName: TLSPolicy
+          kind: TLSPolicy
+          name: tlspolicies.kuadrant.io
+          version: v1
     description: A Kubernetes Operator to manage the lifecycle of the Kuadrant system
     displayName: Kuadrant Operator
     installModes:
-    - supported: false
-      type: OwnNamespace
-    - supported: false
-      type: SingleNamespace
-    - supported: false
-      type: MultiNamespace
-    - supported: true
-      type: AllNamespaces
+      - supported: false
+        type: OwnNamespace
+      - supported: false
+        type: SingleNamespace
+      - supported: false
+        type: MultiNamespace
+      - supported: true
+        type: AllNamespaces
     keywords:
-    - api
-    - api-management
-    - Kuadrant
-    - kubernetes
-    - openshift
-    - cloud-service-protection
-    - rate-limiting
-    - authentication
-    - authorization
+      - api
+      - api-management
+      - Kuadrant
+      - kubernetes
+      - openshift
+      - cloud-service-protection
+      - rate-limiting
+      - authentication
+      - authorization
     labels:
       operatorframework.io/os.linux: supported
     links:
-    - name: Kuadrant Operator
-      url: https://github.com/Kuadrant/kuadrant-operator
-    - name: Kuadrant Docs
-      url: https://kuadrant.io
+      - name: Kuadrant Operator
+        url: https://github.com/Kuadrant/kuadrant-operator
+      - name: Kuadrant Docs
+        url: https://kuadrant.io
     maintainers:
-    - email: eastizle@redhat.com
-      name: Eguzki Astiz Lezaun
-    - email: mcassola@redhat.com
-      name: Guilherme Cassolato
-    - email: didier@redhat.com
-      name: Didier Di Cesare
+      - email: eastizle@redhat.com
+        name: Eguzki Astiz Lezaun
+      - email: mcassola@redhat.com
+        name: Guilherme Cassolato
+      - email: didier@redhat.com
+        name: Didier Di Cesare
     maturity: alpha
     minKubeVersion: 1.19.0
     provider:
       name: Red Hat
       url: https://github.com/Kuadrant/kuadrant-operator
 relatedImages:
-- image: registry.access.redhat.com/rhcl-1/wasm-shim-rhel9@sha256:dac231c8c5b7e5da9482bbafd97c5e09fff5a2421af11284f2d57b8f831f07ef
-  name: wasmshim
-- image: registry.redhat.io/rhcl-1/rhcl-console-plugin-rhel9@sha256:c693234c1dc0c3915a4cb306c4236c3d5cb194898b75c8313bec230d4ea5b90d
-  name: consoleplugin
-- image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:99a18329cd9d30a7c20a438eafda22271de201e9e788d8e5a63adbf4d2fb05a6
-  name: ""
-- image: registry.redhat.io/rhcl-1/rhcl-rhel9-operator@sha256:03173a1b44ddcea2d7a6c8a2d41fad57119eb4fa145934b3fc5330686f0ad2f2
-  name: ""
+  - image: registry.access.redhat.com/rhcl-1/wasm-shim-rhel9@sha256:dac231c8c5b7e5da9482bbafd97c5e09fff5a2421af11284f2d57b8f831f07ef
+    name: wasmshim
+  - image: registry.redhat.io/rhcl-1/rhcl-console-plugin-rhel9@sha256:58fb41c7a1950cd593b8644687ffd751cfb70404246321935d0ff009f2a9ac91
+    name: consoleplugin
+  - image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:c024b855f762f7ef36bcc898f3f9dd48f3918cc4f1c042837aa409a8c8efd531
+    name: ""
+  - image: registry.redhat.io/rhcl-1/rhcl-rhel9-operator@sha256:03173a1b44ddcea2d7a6c8a2d41fad57119eb4fa145934b3fc5330686f0ad2f2
+    name: ""
 schema: olm.bundle
