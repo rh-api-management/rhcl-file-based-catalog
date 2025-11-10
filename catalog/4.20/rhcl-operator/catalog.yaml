@@ -767,7 +767,7 @@ relatedImages:
     name: ""
 schema: olm.bundle
 ---
-image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:da8f6b7d934f9638758170a21ebbe25a5467631f2fc7e82e22eeebce8e37c19f
+image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:7b01a90948d711db0d153049055b7ded2d65edc03e09b53af61f2483e6b75cd8
 name: rhcl-operator.v1.2.0
 package: rhcl-operator
 properties:
@@ -1001,6 +1001,8 @@ properties:
         - authentication
         - authorization
       labels:
+        operatorframework.io/arch.amd64: supported
+        operatorframework.io/arch.arm64: supported
         operatorframework.io/os.linux: supported
       links:
         - name: Kuadrant Operator
@@ -1022,7 +1024,7 @@ properties:
 relatedImages:
   - image: registry.access.redhat.com/rhcl-1/wasm-shim-rhel9@sha256:6c8bbd989e532bc5ed629fc235b7da9eb3a4949b7caf9615bc282ef682ba9221
     name: wasmshim
-  - image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:da8f6b7d934f9638758170a21ebbe25a5467631f2fc7e82e22eeebce8e37c19f
+  - image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:7b01a90948d711db0d153049055b7ded2d65edc03e09b53af61f2483e6b75cd8 
     name: ""
   - image: registry.redhat.io/rhcl-1/rhcl-rhel9-operator@sha256:7fafdf5269a5fae097072314e8d60f60af9a6b214f3d67b37001b6684fc48757
     name: ""

@@ -371,7 +371,7 @@ relatedImages:
     name: limitador
 schema: olm.bundle
 ---
-image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:2b594b7c49f3dce5c427748958ab4732e16f910611687b4898e8b6282ba9303d
+image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:fc0ee45511674e99f3ecd1b807a660e4bcf49af77bf5d66af935d1cb16336bc4 
 name: limitador-operator.v1.2.0
 package: limitador-operator
 properties:
@@ -463,6 +463,8 @@ properties:
         - rate-limit
         - kuadrant
       labels:
+        operatorframework.io/arch.amd64: supported
+        operatorframework.io/arch.arm64: supported
         operatorframework.io/os.linux: supported
       links:
         - name: Limitador Operator
@@ -482,7 +484,7 @@ properties:
         name: Red Hat
         url: https://github.com/Kuadrant/limitador-operator
 relatedImages:
-  - image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:2b594b7c49f3dce5c427748958ab4732e16f910611687b4898e8b6282ba9303d
+  - image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:fc0ee45511674e99f3ecd1b807a660e4bcf49af77bf5d66af935d1cb16336bc4 
   - image: registry.redhat.io/rhcl-1/limitador-rhel9-operator@sha256:6092c510b04a4cee253a52c07b77b625e90d863fa9ccd8727eb901bd81b4e071
     name: ""
   - image: registry.redhat.io/rhcl-1/limitador-rhel9@sha256:aff28d76f9cfeefafd6b652e055bb25e1a2bf250e062e3e9b5e54db873f9eeb7

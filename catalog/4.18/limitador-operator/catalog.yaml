@@ -18,7 +18,7 @@ name: stable
 package: limitador-operator
 schema: olm.channel
 ---
-image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:1fa81c5cf9b184da51cdf9ff17039e5ca9a0c4d6a40d5a536368219b6b3794a3
+image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:21a579a5fd5c93677f68e5a79baaa9f9f77f2fd1310a4ce77532014844610630
 name: limitador-operator.v1.0.2
 package: limitador-operator
 properties:
@@ -131,7 +131,7 @@ relatedImages:
     name: manager
   - image: registry.redhat.io/rhcl-1/limitador-rhel9@sha256:0112e4478abe28486670bb1221b4039ca0b4bde314d72c28485008ea7d6f73c1
     name: limitador
-  - image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:1fa81c5cf9b184da51cdf9ff17039e5ca9a0c4d6a40d5a536368219b6b3794a3
+  - image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:21a579a5fd5c93677f68e5a79baaa9f9f77f2fd1310a4ce77532014844610630
     name: ""
 schema: olm.bundle
 ---
@@ -371,7 +371,7 @@ relatedImages:
     name: limitador
 schema: olm.bundle
 ---
-image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:2b594b7c49f3dce5c427748958ab4732e16f910611687b4898e8b6282ba9303d
+image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:fc0ee45511674e99f3ecd1b807a660e4bcf49af77bf5d66af935d1cb16336bc4 
 name: limitador-operator.v1.2.0
 package: limitador-operator
 properties:
@@ -463,6 +463,8 @@ properties:
         - rate-limit
         - kuadrant
       labels:
+        operatorframework.io/arch.amd64: supported
+        operatorframework.io/arch.arm64: supported
         operatorframework.io/os.linux: supported
       links:
         - name: Limitador Operator
@@ -482,7 +484,7 @@ properties:
         name: Red Hat
         url: https://github.com/Kuadrant/limitador-operator
 relatedImages:
-  - image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:2b594b7c49f3dce5c427748958ab4732e16f910611687b4898e8b6282ba9303d
+  - image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:fc0ee45511674e99f3ecd1b807a660e4bcf49af77bf5d66af935d1cb16336bc4 
   - image: registry.redhat.io/rhcl-1/limitador-rhel9-operator@sha256:6092c510b04a4cee253a52c07b77b625e90d863fa9ccd8727eb901bd81b4e071
     name: ""
   - image: registry.redhat.io/rhcl-1/limitador-rhel9@sha256:aff28d76f9cfeefafd6b652e055bb25e1a2bf250e062e3e9b5e54db873f9eeb7
