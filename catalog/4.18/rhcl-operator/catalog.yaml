@@ -14,6 +14,8 @@ entries:
     replaces: rhcl-operator.v1.1.0
   - name: rhcl-operator.v1.2.0
     replaces: rhcl-operator.v1.1.1
+  - name: rhcl-operator.v1.2.1
+    replaces: rhcl-operator.v1.2.0
 name: stable
 package: rhcl-operator
 schema: olm.channel
@@ -1027,5 +1029,268 @@ relatedImages:
   - image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:7b01a90948d711db0d153049055b7ded2d65edc03e09b53af61f2483e6b75cd8 
     name: ""
   - image: registry.redhat.io/rhcl-1/rhcl-rhel9-operator@sha256:7fafdf5269a5fae097072314e8d60f60af9a6b214f3d67b37001b6684fc48757
+    name: ""
+schema: olm.bundle
+---
+image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:f9f233b605c7468e0b3923e8e53156ae3efaf43ab4c73f4fde9937518d1ad59b
+name: rhcl-operator.v1.2.1
+package: rhcl-operator
+properties:
+  - type: olm.gvk
+    value:
+      group: kuadrant.io
+      kind: AuthPolicy
+      version: v1
+  - type: olm.gvk
+    value:
+      group: kuadrant.io
+      kind: DNSPolicy
+      version: v1
+  - type: olm.gvk
+    value:
+      group: kuadrant.io
+      kind: Kuadrant
+      version: v1beta1
+  - type: olm.gvk
+    value:
+      group: kuadrant.io
+      kind: RateLimitPolicy
+      version: v1
+  - type: olm.gvk
+    value:
+      group: kuadrant.io
+      kind: TLSPolicy
+      version: v1
+  - type: olm.package
+    value:
+      packageName: rhcl-operator
+      version: 1.2.1
+  - type: olm.package.required
+    value:
+      packageName: authorino-operator
+      versionRange: 1.2.4
+  - type: olm.package.required
+    value:
+      packageName: dns-operator
+      versionRange: 1.2.0
+  - type: olm.package.required
+    value:
+      packageName: limitador-operator
+      versionRange: 1.2.0
+  - type: olm.csv.metadata
+    value:
+      annotations:
+        alm-examples: |-
+          [
+            {
+              "apiVersion": "kuadrant.io/v1",
+              "kind": "AuthPolicy",
+              "metadata": {
+                "name": "authpolicy-sample"
+              },
+              "spec": {
+                "rules": {
+                  "authentication": {
+                    "apikey": {
+                      "apiKey": {
+                        "selector": {}
+                      },
+                      "credentials": {
+                        "authorizationHeader": {
+                          "prefix": "APIKEY"
+                        }
+                      }
+                    }
+                  }
+                },
+                "targetRef": {
+                  "group": "gateway.networking.k8s.io",
+                  "kind": "HTTPRoute",
+                  "name": "toystore"
+                }
+              }
+            },
+            {
+              "apiVersion": "kuadrant.io/v1",
+              "kind": "DNSPolicy",
+              "metadata": {
+                "name": "dnspolicy-sample"
+              },
+              "spec": {
+                "healthCheck": {
+                  "protocol": "HTTP"
+                },
+                "providerRefs": [
+                  {
+                    "name": "provider-ref"
+                  }
+                ],
+                "targetRef": {
+                  "group": "gateway.networking.k8s.io",
+                  "kind": "Gateway",
+                  "name": "example-gateway"
+                }
+              }
+            },
+            {
+              "apiVersion": "kuadrant.io/v1",
+              "kind": "RateLimitPolicy",
+              "metadata": {
+                "name": "ratelimitpolicy-sample"
+              },
+              "spec": {
+                "limits": {
+                  "toys": {
+                    "rates": [
+                      {
+                        "limit": 50,
+                        "window": "1m"
+                      }
+                    ]
+                  }
+                },
+                "targetRef": {
+                  "group": "gateway.networking.k8s.io",
+                  "kind": "HTTPRoute",
+                  "name": "toystore"
+                }
+              }
+            },
+            {
+              "apiVersion": "kuadrant.io/v1",
+              "kind": "TLSPolicy",
+              "metadata": {
+                "name": "tlspolicy-sample"
+              },
+              "spec": {
+                "issuerRef": {
+                  "group": "cert-manager.io",
+                  "kind": "ClusterIssuer",
+                  "name": "self-signed-ca"
+                },
+                "targetRef": {
+                  "group": "gateway.networking.k8s.io",
+                  "kind": "Gateway",
+                  "name": "example-gateway"
+                }
+              }
+            },
+            {
+              "apiVersion": "kuadrant.io/v1beta1",
+              "kind": "Kuadrant",
+              "metadata": {
+                "name": "kuadrant-sample"
+              },
+              "spec": {}
+            }
+          ]
+        capabilities: Basic Install
+        categories: Integration & Delivery
+        containerImage: registry.redhat.io/rhcl-1/rhcl-rhel9-operator@sha256:1afb2fe0fe38bb0ef02c4b8cb9edb83f7847da47f8ddad766223664dc05ce272
+        createdAt: 27 Nov 2025, 19:24
+        description: Red Hat Connectivity Link enables you to secure, protect, and connect your APIs and applications in multicluster, multicloud, and hybrid cloud environments
+        features.operators.openshift.io/cnf: "false"
+        features.operators.openshift.io/cni: "false"
+        features.operators.openshift.io/csi: "false"
+        features.operators.openshift.io/disconnected: "true"
+        features.operators.openshift.io/fips-compliant: "false"
+        features.operators.openshift.io/proxy-aware: "false"
+        features.operators.openshift.io/tls-profiles: "false"
+        features.operators.openshift.io/token-auth-aws: "false"
+        features.operators.openshift.io/token-auth-azure: "false"
+        features.operators.openshift.io/token-auth-gcp: "false"
+        operators.openshift.io/valid-subscription: '["Red Hat Connectivity Link"]'
+        operators.operatorframework.io/builder: operator-sdk-v1.33.0
+        operators.operatorframework.io/project_layout: go.kubebuilder.io/v4
+        repository: https://github.com/kuadrant/kuadrant-operator
+        support: kuadrant
+      apiServiceDefinitions: {}
+      crdDescriptions:
+        owned:
+          - description: AuthPolicy enables authentication and authorization for service workloads in a Gateway API network
+            displayName: AuthPolicy
+            kind: AuthPolicy
+            name: authpolicies.kuadrant.io
+            version: v1
+          - description: DNSPolicy configures how North-South based traffic should be balanced and reach the gateways
+            displayName: DNSPolicy
+            kind: DNSPolicy
+            name: dnspolicies.kuadrant.io
+            version: v1
+          - description: Kuadrant configures installations of Kuadrant Service Protection components
+            displayName: Kuadrant
+            kind: Kuadrant
+            name: kuadrants.kuadrant.io
+            version: v1beta1
+          - kind: OIDCPolicy
+            name: oidcpolicies.extensions.kuadrant.io
+            version: v1alpha1
+          - kind: PlanPolicy
+            name: planpolicies.extensions.kuadrant.io
+            version: v1alpha1
+          - description: RateLimitPolicy enables rate limiting for service workloads in a Gateway API network
+            displayName: RateLimitPolicy
+            kind: RateLimitPolicy
+            name: ratelimitpolicies.kuadrant.io
+            version: v1
+          - kind: TelemetryPolicy
+            name: telemetrypolicies.extensions.kuadrant.io
+            version: v1alpha1
+          - description: TLSPolicy provides tls for gateway listeners by managing the lifecycle of tls certificates
+            displayName: TLSPolicy
+            kind: TLSPolicy
+            name: tlspolicies.kuadrant.io
+            version: v1
+          - kind: TokenRateLimitPolicy
+            name: tokenratelimitpolicies.kuadrant.io
+            version: v1alpha1
+      description: A Kubernetes Operator to manage the lifecycle of the Kuadrant system
+      displayName: Red Hat Connectivity Link
+      installModes:
+        - supported: false
+          type: OwnNamespace
+        - supported: false
+          type: SingleNamespace
+        - supported: false
+          type: MultiNamespace
+        - supported: true
+          type: AllNamespaces
+      keywords:
+        - api
+        - api-management
+        - Kuadrant
+        - kubernetes
+        - openshift
+        - cloud-service-protection
+        - rate-limiting
+        - authentication
+        - authorization
+      labels:
+        operatorframework.io/arch.amd64: supported
+        operatorframework.io/arch.arm64: supported
+        operatorframework.io/os.linux: supported
+      links:
+        - name: Kuadrant Operator
+          url: https://github.com/Kuadrant/kuadrant-operator
+        - name: Kuadrant Docs
+          url: https://kuadrant.io
+      maintainers:
+        - email: eastizle@redhat.com
+          name: Eguzki Astiz Lezaun
+        - email: mcassola@redhat.com
+          name: Guilherme Cassolato
+        - email: didier@redhat.com
+          name: Didier Di Cesare
+      maturity: alpha
+      minKubeVersion: 1.19.0
+      provider:
+        name: Red Hat
+        url: https://github.com/Kuadrant/kuadrant-operator
+relatedImages:
+  - image: registry.access.redhat.com/rhcl-1/wasm-shim-rhel9@sha256:aa524e9278976aa3ef0f2d3aeb981e28d2ea6ed6fc5fede05a5dd33db0bb3de2
+    name: wasmshim
+  - image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:f9f233b605c7468e0b3923e8e53156ae3efaf43ab4c73f4fde9937518d1ad59b
+    name: ""
+  - image: registry.redhat.io/rhcl-1/rhcl-rhel9-operator@sha256:1afb2fe0fe38bb0ef02c4b8cb9edb83f7847da47f8ddad766223664dc05ce272
     name: ""
 schema: olm.bundle
