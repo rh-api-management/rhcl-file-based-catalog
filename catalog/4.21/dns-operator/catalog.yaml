@@ -12,7 +12,7 @@ name: stable
 package: dns-operator
 schema: olm.channel
 ---
-image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:cfee0acec51ac63e2209567ac506c2b1e5e8528dbe1aed0dc3550a1077cbcaec
+image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:679160ea3e22c901001385eabd92bab8f723bc5f20accd1c8173e81df3bbda56
 name: dns-operator.v1.3.0
 package: dns-operator
 properties:
@@ -152,7 +152,7 @@ properties:
       provider:
         name: Red Hat
 relatedImages:
-  - image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:cfee0acec51ac63e2209567ac506c2b1e5e8528dbe1aed0dc3550a1077cbcaec
+  - image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:679160ea3e22c901001385eabd92bab8f723bc5f20accd1c8173e81df3bbda56
     name: ""
   - image: registry.redhat.io/rhcl-1/dns-rhel9-operator@sha256:55951ca289f66b984083ac3c8e268ddd30a76a87bfac9cf9268e8ce218e4d0b3
     name: ""
