@@ -18,6 +18,8 @@ entries:
     replaces: limitador-operator.v1.1.0
   - name: limitador-operator.v1.2.0
     replaces: limitador-operator.v1.1.1
+  - name: limitador-operator.v1.3.0
+    replaces: limitador-operator.v1.2.0
 name: stable
 package: limitador-operator
 schema: olm.channel
@@ -726,5 +728,125 @@ relatedImages:
   - image: registry.redhat.io/rhcl-1/limitador-rhel9-operator@sha256:6092c510b04a4cee253a52c07b77b625e90d863fa9ccd8727eb901bd81b4e071
     name: ""
   - image: registry.redhat.io/rhcl-1/limitador-rhel9@sha256:aff28d76f9cfeefafd6b652e055bb25e1a2bf250e062e3e9b5e54db873f9eeb7
+    name: limitador
+schema: olm.bundle
+---
+image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:498fa251e7828b5df7408641e44e176b5df4e20d59e203fcecc6296e895d46f2
+name: limitador-operator.v1.3.0
+package: limitador-operator
+properties:
+  - type: olm.gvk
+    value:
+      group: limitador.kuadrant.io
+      kind: Limitador
+      version: v1alpha1
+  - type: olm.package
+    value:
+      packageName: limitador-operator
+      version: 1.3.0
+  - type: olm.csv.metadata
+    value:
+      annotations:
+        alm-examples: |-
+          [
+            {
+              "apiVersion": "limitador.kuadrant.io/v1alpha1",
+              "kind": "Limitador",
+              "metadata": {
+                "name": "limitador-sample"
+              },
+              "spec": {
+                "limits": [
+                  {
+                    "conditions": [
+                      "get_toy == 'yes'"
+                    ],
+                    "max_value": 2,
+                    "name": "toy_get_route",
+                    "namespace": "toystore-app",
+                    "seconds": 30,
+                    "variables": []
+                  }
+                ],
+                "listener": {
+                  "grpc": {
+                    "port": 8081
+                  },
+                  "http": {
+                    "port": 8080
+                  }
+                }
+              }
+            }
+          ]
+        capabilities: Basic Install
+        categories: Integration & Delivery
+        containerImage: registry.redhat.io/rhcl-1/limitador-rhel9-operator@sha256:9a3ccb54bc904521277b87e1d178d8134cc6ef744eb4ec5b64177355fd5a9e66
+        createdAt: 07 Oct 2025, 11:32
+        description: Enables rate limiting for Gateways and applications in a Gateway API network
+        features.operators.openshift.io/cnf: "false"
+        features.operators.openshift.io/cni: "false"
+        features.operators.openshift.io/csi: "false"
+        features.operators.openshift.io/disconnected: "true"
+        features.operators.openshift.io/fips-compliant: "false"
+        features.operators.openshift.io/proxy-aware: "false"
+        features.operators.openshift.io/tls-profiles: "false"
+        features.operators.openshift.io/token-auth-aws: "false"
+        features.operators.openshift.io/token-auth-azure: "false"
+        features.operators.openshift.io/token-auth-gcp: "false"
+        operators.openshift.io/valid-subscription: '["Red Hat Connectivity Link"]'
+        operators.operatorframework.io/builder: operator-sdk-v1.32.0
+        operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
+        repository: https://github.com/kuadrant/limitador-operator
+        support: kuadrant
+      apiServiceDefinitions: {}
+      crdDescriptions:
+        owned:
+          - description: Limitador is the Schema for the limitadors API
+            displayName: Limitador
+            kind: Limitador
+            name: limitadors.limitador.kuadrant.io
+            version: v1alpha1
+      description: The Limitador operator installs and maintains limitador instances
+      displayName: Limitador
+      installModes:
+        - supported: false
+          type: OwnNamespace
+        - supported: false
+          type: SingleNamespace
+        - supported: false
+          type: MultiNamespace
+        - supported: true
+          type: AllNamespaces
+      keywords:
+        - api
+        - rate-limit
+        - kuadrant
+      labels:
+        operatorframework.io/arch.amd64: supported
+        operatorframework.io/arch.arm64: supported
+        operatorframework.io/os.linux: supported
+      links:
+        - name: Limitador Operator
+          url: https://github.com/Kuadrant/limitador-operator
+        - name: Kuadrant Docs
+          url: https://kuadrant.io
+      maintainers:
+        - email: eastizle@redhat.com
+          name: Eguzki Astiz Lezaun
+        - email: asnaps@redhat.com
+          name: Alex Snaps
+        - email: didier@redhat.com
+          name: Didier Di Cesare
+      maturity: alpha
+      minKubeVersion: 1.25.0
+      provider:
+        name: Red Hat
+        url: https://github.com/Kuadrant/limitador-operator
+relatedImages:
+  - image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:498fa251e7828b5df7408641e44e176b5df4e20d59e203fcecc6296e895d46f2
+  - image: registry.redhat.io/rhcl-1/limitador-rhel9-operator@sha256:9a3ccb54bc904521277b87e1d178d8134cc6ef744eb4ec5b64177355fd5a9e66
+    name: ""
+  - image: registry.redhat.io/rhcl-1/limitador-rhel9@sha256:43bc4021bb30c7ef305e01c11e22ca5584c7e2c192b4db0a5646f04f715ee3b0
     name: limitador
 schema: olm.bundle
