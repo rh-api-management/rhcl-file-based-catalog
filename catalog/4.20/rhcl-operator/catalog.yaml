@@ -1553,7 +1553,7 @@ properties:
         url: https://github.com/Kuadrant/kuadrant-operator
 relatedImages:
   - image: registry.access.redhat.com/rhcl-1/wasm-shim-rhel9@sha256:3ba5a94f15f2792ec30b47f6d14016b88b7bbde8c4e46881177e1e9c73faee04
-      name: wasmshim
+    name: wasmshim
   - image: registry.redhat.io/rhcl-1/developer-portal-controller-rhel9@sha256:4ab654849ee3ffb6b2ae64386380ea2344031f9a21fdaecfdd8090836e9e8ba2
     name: developerportal
   - image: registry.redhat.io/rhcl-1/rhcl-console-plugin-rhel9@sha256:41755d5e16ee5409cfe8888cf5883b262820baea4eae449fcf61f06ab1756f57
