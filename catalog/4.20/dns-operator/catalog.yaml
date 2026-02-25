@@ -674,7 +674,7 @@ properties:
           ]
         capabilities: Basic Install
         categories: Integration & Delivery
-        containerImage: registry.redhat.io/rhcl-1/dns-rhel9-operator@sha256:55951ca289f66b984083ac3c8e268ddd30a76a87bfac9cf9268e8ce218e4d0b3
+        containerImage: registry.redhat.io/rhcl-1/dns-rhel9-operator@sha256:36a1a483a361a54674465916a5850c4da3ace4897999a218f1a07617aafaba20
         createdAt: 25 Sep 2025, 13:03
         description: Configures how north-south traffic from outside the network is balanced and reaches Gateways.
         features.operators.openshift.io/cnf: "false"
@@ -740,6 +740,6 @@ properties:
 relatedImages:
   - image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:679160ea3e22c901001385eabd92bab8f723bc5f20accd1c8173e81df3bbda56
     name: ""
-  - image: registry.redhat.io/rhcl-1/dns-rhel9-operator@sha256:55951ca289f66b984083ac3c8e268ddd30a76a87bfac9cf9268e8ce218e4d0b3
+  - image: registry.redhat.io/rhcl-1/dns-rhel9-operator@sha256:36a1a483a361a54674465916a5850c4da3ace4897999a218f1a07617aafaba20
     name: ""
 schema: olm.bundle
