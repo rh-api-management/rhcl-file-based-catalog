@@ -12,7 +12,7 @@ name: stable
 package: rhcl-operator
 schema: olm.channel
 ---
-image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:d861f36c30e951dc5d679e069e5f9cb1e4e2c47afe07cb65ab7f545569456026
+image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:7bb255604392b0444e076a6bc65e1cc7993d492637547db425c70113027f9190
 name: rhcl-operator.v1.3.0
 package: rhcl-operator
 properties:
@@ -267,7 +267,7 @@ properties:
         name: Red Hat
         url: https://github.com/Kuadrant/kuadrant-operator
 relatedImages:
-  - image: registry.access.redhat.com/rhcl-1/wasm-shim-rhel9@sha256:3ba5a94f15f2792ec30b47f6d14016b88b7bbde8c4e46881177e1e9c73faee04
+  - image: registry.access.redhat.com/rhcl-1/wasm-shim-rhel9@sha256:22c87cc5fa70cf8f10588687145a7e32551a5f3734d5fc81e72b9a4aab550db6
     name: wasmshim
   - image: registry.redhat.io/rhcl-1/developer-portal-controller-rhel9@sha256:4ab654849ee3ffb6b2ae64386380ea2344031f9a21fdaecfdd8090836e9e8ba2
     name: developerportal
@@ -275,7 +275,7 @@ relatedImages:
     name: console-plugin-latest
   - image: registry.redhat.io/rhcl-1/rhcl-console-plugin-rhel9@sha256:c72f23284033de1032e2b209cd2c6087ad0f1aacb8c7312fd324df3d8fee49b9
     name: console-plugin-pf5
-  - image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:d861f36c30e951dc5d679e069e5f9cb1e4e2c47afe07cb65ab7f545569456026
+  - image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:7bb255604392b0444e076a6bc65e1cc7993d492637547db425c70113027f9190
     name: ""
   - image: registry.redhat.io/rhcl-1/rhcl-rhel9-operator@sha256:7aa6d6dbbde488260789adb94fa232a06d1e635cc2aaf86af24f8cf14a17eef8
     name: ""
