@@ -11,7 +11,7 @@ metadata:
   creationTimestamp: null
   labels:
     appstudio.openshift.io/application: rhcl-file-based-catalog
-    appstudio.openshift.io/component: rhcl-file1-based-catalog-4-21
+    appstudio.openshift.io/component: rhcl-file-based-catalog-4-21
     pipelines.appstudio.openshift.io/type: build
   name: rhcl-file-based-catalog-4-21-on-push
   namespace: api-management-tenant
