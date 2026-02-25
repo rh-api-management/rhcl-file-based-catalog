@@ -81,6 +81,7 @@ properties:
               "metadata": {
                 "name": "authpolicy-sample"
               },
+
               "spec": {
                 "rules": {
                   "authentication": {
@@ -152,6 +153,7 @@ properties:
             {
               "apiVersion": "kuadrant.io/v1",
               "kind": "TLSPolicy",
+
               "metadata": {
                 "name": "tlspolicy-sample"
               },

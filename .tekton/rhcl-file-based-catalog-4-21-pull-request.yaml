@@ -8,7 +8,7 @@ metadata:
     build.appstudio.redhat.com/target_branch: '{{target_branch}}'
     pipelinesascode.tekton.dev/cancel-in-progress: "true"
     pipelinesascode.tekton.dev/max-keep-runs: "3"
-    pipelinesascode.tekton.dev/on-cel-expression: event == "pull_request" && target_branch == "main" && (".tekton/rhcl-file-based-catalog-4-21-pull-request.yaml".pathChanged() || ".tekton/fbc-build-pipeline.yaml".pathChanged() || "catalog/4.21.Containerfile".pathChanged() || "catalog/4.21/.*".pathChanged())
+    pipelinesascode.tekton.dev/on-cel-expression: event == "pull_request" && target_branch == "main" && (".tekton/rhcl-file-based-catalog-4-21-pull-request.yaml".pathChanged() || ".tekton/fbc-build-pipeline.yaml".pathChanged() || "catalog/4.21.Containerfile".pathChanged() || "catalog/4.21/**".pathChanged())
   creationTimestamp: null
   labels:
     appstudio.openshift.io/application: rhcl-file-based-catalog
