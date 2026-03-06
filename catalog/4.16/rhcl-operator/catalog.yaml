@@ -1272,7 +1272,7 @@ relatedImages:
     name: ""
 schema: olm.bundle
 ---
-image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:sha256:1861a9b8125491fa1e7e04c0aac4be64641215ceb29fc6a9007c4b36db167f3e
+image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:1861a9b8125491fa1e7e04c0aac4be64641215ceb29fc6a9007c4b36db167f3e
 name: rhcl-operator.v1.2.1
 package: rhcl-operator
 properties:
