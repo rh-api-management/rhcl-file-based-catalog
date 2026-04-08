@@ -1,0 +1,9 @@
+{
+    "extends": [
+        "github>konflux-ci/mintmaker//config/renovate/renovate.json"
+    ],
+    "automerge": true,
+    "platformAutomerge": true,
+    "recreateWhen": "always",
+    "rebaseWhen": "behind-base-branch"
+}
