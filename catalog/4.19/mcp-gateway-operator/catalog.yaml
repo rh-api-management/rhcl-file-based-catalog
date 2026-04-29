@@ -35,6 +35,10 @@ properties:
     value:
       packageName: mcp-gateway
       version: 0.6.0
+  - type: olm.package.required
+    value:
+      packageName: rhcl-operator
+      versionRange: ">=1.3.2"
   - type: olm.csv.metadata
     value:
       annotations:
