@@ -2187,6 +2187,16 @@ properties:
       group: kuadrant.io
       kind: TLSPolicy
       version: v1
+  - type: olm.gvk
+    value:
+      group: devportal.kuadrant.io
+      kind: APIKey
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: devportal.kuadrant.io
+      kind: APIProduct
+      version: v1alpha1
   - type: olm.package
     value:
       packageName: rhcl-operator
