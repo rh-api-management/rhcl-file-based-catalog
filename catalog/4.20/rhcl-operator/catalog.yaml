@@ -806,6 +806,26 @@ properties:
       group: kuadrant.io
       kind: TLSPolicy
       version: v1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: OIDCPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: PlanPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: TelemetryPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: kuadrant.io
+      kind: TokenRateLimitPolicy
+      version: v1alpha1
   - type: olm.package
     value:
       packageName: rhcl-operator
@@ -1069,6 +1089,26 @@ properties:
       group: kuadrant.io
       kind: TLSPolicy
       version: v1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: OIDCPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: PlanPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: TelemetryPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: kuadrant.io
+      kind: TokenRateLimitPolicy
+      version: v1alpha1
   - type: olm.package
     value:
       packageName: rhcl-operator
@@ -1341,6 +1381,26 @@ properties:
     value:
       group: devportal.kuadrant.io
       kind: APIProduct
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: OIDCPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: PlanPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: TelemetryPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: kuadrant.io
+      kind: TokenRateLimitPolicy
       version: v1alpha1
   - type: olm.package
     value:
@@ -1627,6 +1687,26 @@ properties:
       group: devportal.kuadrant.io
       kind: APIProduct
       version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: OIDCPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: PlanPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: TelemetryPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: kuadrant.io
+      kind: TokenRateLimitPolicy
+      version: v1alpha1
   - type: olm.package
     value:
       packageName: rhcl-operator
@@ -1911,6 +1991,26 @@ properties:
     value:
       group: devportal.kuadrant.io
       kind: APIProduct
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: OIDCPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: PlanPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: extensions.kuadrant.io
+      kind: TelemetryPolicy
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: kuadrant.io
+      kind: TokenRateLimitPolicy
       version: v1alpha1
   - type: olm.package
     value:
