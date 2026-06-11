@@ -9,7 +9,6 @@ schema: olm.package
 entries:
   - name: mcp-gateway.v0.6.0
   - name: mcp-gateway.v0.7.0
-    replaces: mcp-gateway.v0.6.0
 name: preview
 package: mcp-gateway
 schema: olm.channel
