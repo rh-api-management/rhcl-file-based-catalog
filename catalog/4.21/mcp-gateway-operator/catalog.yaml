@@ -178,7 +178,6 @@ relatedImages:
 schema: olm.bundle
 
 ---
----
 image: registry.redhat.io/rhcl-tech-preview/mcp-gateway-operator-bundle@sha256:6e0eb17d728705eddb2849ebcd50f7d95d66a006d32ea571ff7381fb2bf489f3
 name: mcp-gateway.v0.7.0
 package: mcp-gateway

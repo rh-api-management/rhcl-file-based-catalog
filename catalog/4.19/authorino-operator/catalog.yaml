@@ -3797,7 +3797,6 @@ relatedImages:
 schema: olm.bundle
 
 ---
----
 image: registry.redhat.io/rhcl-1/authorino-operator-bundle@sha256:50232c1afd6f3323bc2837300385fdb6994e4f4b4c1e22808b7ee1171aa04824
 name: authorino-operator.v1.4.0
 package: authorino-operator
