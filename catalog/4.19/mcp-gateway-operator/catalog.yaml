@@ -178,170 +178,169 @@ relatedImages:
 schema: olm.bundle
 
 ---
----
 image: registry.redhat.io/rhcl-tech-preview/mcp-gateway-operator-bundle@sha256:6e0eb17d728705eddb2849ebcd50f7d95d66a006d32ea571ff7381fb2bf489f3
 name: mcp-gateway.v0.7.0
 package: mcp-gateway
 properties:
-- type: olm.gvk
-  value:
-    group: mcp.kuadrant.io
-    kind: MCPGatewayExtension
-    version: v1alpha1
-- type: olm.gvk
-  value:
-    group: mcp.kuadrant.io
-    kind: MCPServerRegistration
-    version: v1alpha1
-- type: olm.gvk
-  value:
-    group: mcp.kuadrant.io
-    kind: MCPVirtualServer
-    version: v1alpha1
-- type: olm.package
-  value:
-    packageName: mcp-gateway
-    version: 0.7.0
-- type: olm.package.required
-  value:
-    packageName: rhcl-operator
-    versionRange: '>=1.3.2'
-- type: olm.csv.metadata
-  value:
-    annotations:
-      alm-examples: |-
-        [
-          {
-            "apiVersion": "mcp.kuadrant.io/v1alpha1",
-            "kind": "MCPGatewayExtension",
-            "metadata": {
-              "name": "mcp-gateway-extension",
-              "namespace": "mcp-system"
+  - type: olm.gvk
+    value:
+      group: mcp.kuadrant.io
+      kind: MCPGatewayExtension
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: mcp.kuadrant.io
+      kind: MCPServerRegistration
+      version: v1alpha1
+  - type: olm.gvk
+    value:
+      group: mcp.kuadrant.io
+      kind: MCPVirtualServer
+      version: v1alpha1
+  - type: olm.package
+    value:
+      packageName: mcp-gateway
+      version: 0.7.0
+  - type: olm.package.required
+    value:
+      packageName: rhcl-operator
+      versionRange: '>=1.3.2'
+  - type: olm.csv.metadata
+    value:
+      annotations:
+        alm-examples: |-
+          [
+            {
+              "apiVersion": "mcp.kuadrant.io/v1alpha1",
+              "kind": "MCPGatewayExtension",
+              "metadata": {
+                "name": "mcp-gateway-extension",
+                "namespace": "mcp-system"
+              },
+              "spec": {
+                "targetRef": {
+                  "group": "gateway.networking.k8s.io",
+                  "kind": "Gateway",
+                  "name": "mcp-gateway",
+                  "namespace": "gateway-system",
+                  "sectionName": "mcp"
+                }
+              }
             },
-            "spec": {
-              "targetRef": {
-                "group": "gateway.networking.k8s.io",
-                "kind": "Gateway",
-                "name": "mcp-gateway",
-                "namespace": "gateway-system",
-                "sectionName": "mcp"
+            {
+              "apiVersion": "mcp.kuadrant.io/v1alpha1",
+              "kind": "MCPServerRegistration",
+              "metadata": {
+                "name": "example-server",
+                "namespace": "mcp-test"
+              },
+              "spec": {
+                "prefix": "example_",
+                "targetRef": {
+                  "group": "gateway.networking.k8s.io",
+                  "kind": "HTTPRoute",
+                  "name": "example-route"
+                }
+              }
+            },
+            {
+              "apiVersion": "mcp.kuadrant.io/v1alpha1",
+              "kind": "MCPVirtualServer",
+              "metadata": {
+                "name": "example-vs",
+                "namespace": "default"
+              },
+              "spec": {
+                "description": "example virtual server",
+                "tools": [
+                  "server1_tool1",
+                  "server2_tool2"
+                ]
               }
             }
-          },
-          {
-            "apiVersion": "mcp.kuadrant.io/v1alpha1",
-            "kind": "MCPServerRegistration",
-            "metadata": {
-              "name": "example-server",
-              "namespace": "mcp-test"
-            },
-            "spec": {
-              "prefix": "example_",
-              "targetRef": {
-                "group": "gateway.networking.k8s.io",
-                "kind": "HTTPRoute",
-                "name": "example-route"
-              }
-            }
-          },
-          {
-            "apiVersion": "mcp.kuadrant.io/v1alpha1",
-            "kind": "MCPVirtualServer",
-            "metadata": {
-              "name": "example-vs",
-              "namespace": "default"
-            },
-            "spec": {
-              "description": "example virtual server",
-              "tools": [
-                "server1_tool1",
-                "server2_tool2"
-              ]
-            }
-          }
-        ]
-      capabilities: Basic Install
-      categories: Integration & Delivery
-      containerImage: registry.redhat.io/rhcl-tech-preview/mcp-gateway-rhel9-operator@sha256:d523288fad298f12a8dfc559ff279c06811b32db418c0ffd7a291bfd115fef82
-      createdAt: "2026-06-02T08:58:40Z"
-      description: An Envoy-based gateway for Model Context Protocol (MCP) servers
-      features.operators.openshift.io/cnf: "false"
-      features.operators.openshift.io/cni: "false"
-      features.operators.openshift.io/csi: "false"
-      features.operators.openshift.io/disconnected: "true"
-      features.operators.openshift.io/fips-compliant: "false"
-      features.operators.openshift.io/proxy-aware: "false"
-      features.operators.openshift.io/tls-profiles: "false"
-      features.operators.openshift.io/token-auth-aws: "false"
-      features.operators.openshift.io/token-auth-azure: "false"
-      features.operators.openshift.io/token-auth-gcp: "false"
-      operators.openshift.io/valid-subscription: '["Red Hat Connectivity Link"]'
-      operators.operatorframework.io/builder: operator-sdk-v1.38.0
-      operators.operatorframework.io/project_layout: go.kubebuilder.io/v4
-      repository: https://github.com/Kuadrant/mcp-gateway
-      support: Red Hat
-      vendor: Red Hat, Inc.
-    apiServiceDefinitions: {}
-    crdDescriptions:
-      owned:
-      - description: Extends a Gateway API Gateway to handle MCP traffic by deploying
-          a broker-router and configuring Envoy.
-        displayName: MCP Gateway Extension
-        kind: MCPGatewayExtension
-        name: mcpgatewayextensions.mcp.kuadrant.io
-        version: v1alpha1
-      - description: Registers an upstream MCP server for tool federation through
-          the gateway.
-        displayName: MCP Server Registration
-        kind: MCPServerRegistration
-        name: mcpserverregistrations.mcp.kuadrant.io
-        version: v1alpha1
-      - description: Defines a virtual MCP server that exposes a curated subset of
-          tools from registered servers.
-        displayName: MCP Virtual Server
-        kind: MCPVirtualServer
-        name: mcpvirtualservers.mcp.kuadrant.io
-        version: v1alpha1
-    description: MCP Gateway enables you to federate, secure, and route Model Context
-      Protocol (MCP) traffic through an Envoy-based gateway.
-    displayName: MCP Gateway Operator (Tech Preview)
-    installModes:
-    - supported: true
-      type: OwnNamespace
-    - supported: true
-      type: SingleNamespace
-    - supported: false
-      type: MultiNamespace
-    - supported: true
-      type: AllNamespaces
-    keywords:
-    - mcp
-    - gateway
-    - model-context-protocol
-    - envoy
-    - kubernetes
-    labels:
-      operatorframework.io/arch.amd64: supported
-      operatorframework.io/arch.arm64: supported
-      operatorframework.io/os.linux: supported
-    links:
-    - name: Documentation
-      url: https://github.com/Kuadrant/mcp-gateway/tree/main/docs
-    - name: Repository
-      url: https://github.com/Kuadrant/mcp-gateway
-    maintainers:
-    - email: mcp-gateway@kuadrant.io
-      name: Kuadrant
-    maturity: preview
-    minKubeVersion: 1.28.0
-    provider:
-      name: Kuadrant
-      url: https://kuadrant.io
+          ]
+        capabilities: Basic Install
+        categories: Integration & Delivery
+        containerImage: registry.redhat.io/rhcl-tech-preview/mcp-gateway-rhel9-operator@sha256:d523288fad298f12a8dfc559ff279c06811b32db418c0ffd7a291bfd115fef82
+        createdAt: "2026-06-02T08:58:40Z"
+        description: An Envoy-based gateway for Model Context Protocol (MCP) servers
+        features.operators.openshift.io/cnf: "false"
+        features.operators.openshift.io/cni: "false"
+        features.operators.openshift.io/csi: "false"
+        features.operators.openshift.io/disconnected: "true"
+        features.operators.openshift.io/fips-compliant: "false"
+        features.operators.openshift.io/proxy-aware: "false"
+        features.operators.openshift.io/tls-profiles: "false"
+        features.operators.openshift.io/token-auth-aws: "false"
+        features.operators.openshift.io/token-auth-azure: "false"
+        features.operators.openshift.io/token-auth-gcp: "false"
+        operators.openshift.io/valid-subscription: '["Red Hat Connectivity Link"]'
+        operators.operatorframework.io/builder: operator-sdk-v1.38.0
+        operators.operatorframework.io/project_layout: go.kubebuilder.io/v4
+        repository: https://github.com/Kuadrant/mcp-gateway
+        support: Red Hat
+        vendor: Red Hat, Inc.
+      apiServiceDefinitions: {}
+      crdDescriptions:
+        owned:
+        - description: Extends a Gateway API Gateway to handle MCP traffic by deploying
+            a broker-router and configuring Envoy.
+          displayName: MCP Gateway Extension
+          kind: MCPGatewayExtension
+          name: mcpgatewayextensions.mcp.kuadrant.io
+          version: v1alpha1
+        - description: Registers an upstream MCP server for tool federation through
+            the gateway.
+          displayName: MCP Server Registration
+          kind: MCPServerRegistration
+          name: mcpserverregistrations.mcp.kuadrant.io
+          version: v1alpha1
+        - description: Defines a virtual MCP server that exposes a curated subset of
+            tools from registered servers.
+          displayName: MCP Virtual Server
+          kind: MCPVirtualServer
+          name: mcpvirtualservers.mcp.kuadrant.io
+          version: v1alpha1
+      description: MCP Gateway enables you to federate, secure, and route Model Context
+        Protocol (MCP) traffic through an Envoy-based gateway.
+      displayName: MCP Gateway Operator (Tech Preview)
+      installModes:
+      - supported: true
+        type: OwnNamespace
+      - supported: true
+        type: SingleNamespace
+      - supported: false
+        type: MultiNamespace
+      - supported: true
+        type: AllNamespaces
+      keywords:
+      - mcp
+      - gateway
+      - model-context-protocol
+      - envoy
+      - kubernetes
+      labels:
+        operatorframework.io/arch.amd64: supported
+        operatorframework.io/arch.arm64: supported
+        operatorframework.io/os.linux: supported
+      links:
+      - name: Documentation
+        url: https://github.com/Kuadrant/mcp-gateway/tree/main/docs
+      - name: Repository
+        url: https://github.com/Kuadrant/mcp-gateway
+      maintainers:
+      - email: mcp-gateway@kuadrant.io
+        name: Kuadrant
+      maturity: preview
+      minKubeVersion: 1.28.0
+      provider:
+        name: Kuadrant
+        url: https://kuadrant.io
 relatedImages:
-- image: registry.redhat.io/rhcl-tech-preview/mcp-gateway-operator-bundle@sha256:6e0eb17d728705eddb2849ebcd50f7d95d66a006d32ea571ff7381fb2bf489f3
-  name: ""
-- image: registry.redhat.io/rhcl-tech-preview/mcp-gateway-rhel9-operator@sha256:d523288fad298f12a8dfc559ff279c06811b32db418c0ffd7a291bfd115fef82
-  name: controller
-- image: registry.redhat.io/rhcl-tech-preview/mcp-gateway-rhel9@sha256:e2a699c52789a0878b72489d89b2e3c4eb28d411a654c3c89c4b183d75723ac2
-  name: router-broker
+  - image: registry.redhat.io/rhcl-tech-preview/mcp-gateway-operator-bundle@sha256:6e0eb17d728705eddb2849ebcd50f7d95d66a006d32ea571ff7381fb2bf489f3
+    name: ""
+  - image: registry.redhat.io/rhcl-tech-preview/mcp-gateway-rhel9-operator@sha256:d523288fad298f12a8dfc559ff279c06811b32db418c0ffd7a291bfd115fef82
+    name: controller
+  - image: registry.redhat.io/rhcl-tech-preview/mcp-gateway-rhel9@sha256:e2a699c52789a0878b72489d89b2e3c4eb28d411a654c3c89c4b183d75723ac2
+    name: router-broker
 schema: olm.bundle
