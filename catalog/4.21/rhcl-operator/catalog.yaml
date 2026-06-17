@@ -22,6 +22,15 @@ name: stable
 package: rhcl-operator
 schema: olm.channel
 ---
+schema: olm.deprecations
+package: rhcl-operator
+entries:
+  - reference:
+      schema: olm.bundle
+      name: rhcl-operator.v1.4.0
+    message: |
+      rhcl-operator.v1.4.0 is deprecated. Uninstall and install rhcl-operator.v1.3.4 for support.      
+---
 image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:7bb255604392b0444e076a6bc65e1cc7993d492637547db425c70113027f9190
 name: rhcl-operator.v1.3.0
 package: rhcl-operator

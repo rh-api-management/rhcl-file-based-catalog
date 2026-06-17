@@ -52,6 +52,15 @@ name: tech-preview-v1
 package: authorino-operator
 schema: olm.channel
 ---
+schema: olm.deprecations
+package: rhcl-operator
+entries:
+  - reference:
+      schema: olm.bundle
+      name: rhcl-operator.v1.4.0
+    message: |
+      rhcl-operator.v1.4.0 is deprecated. Uninstall and install rhcl-operator.v1.3.4 for support.
+---
 image: registry.redhat.io/3scale-tech-preview/authorino-operator-bundle@sha256:ade1e993e7b4243cc39a678ad36654aad06776b47c1edc776f00d3524ff4c129
 name: authorino-operator.v1.0.2
 package: authorino-operator
