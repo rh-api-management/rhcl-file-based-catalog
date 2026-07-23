@@ -3109,7 +3109,6 @@ relatedImages:
   name: ""
 schema: olm.bundle
 ---
----
 image: registry.redhat.io/rhcl-1/rhcl-operator-bundle@sha256:e74d5a4a7e8a72f9faf242d8df0b37243980ab48018b70e1ce04b9e6fb136ca8
 name: rhcl-operator.v1.4.2
 package: rhcl-operator

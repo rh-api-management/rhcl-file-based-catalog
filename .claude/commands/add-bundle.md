@@ -68,7 +68,11 @@ For each selected OCP version:
      - `name: <bundle-name>`
      - `replaces: <replaces-value>` (from step 5)
      - `skips:` list (from step 5, if any)
-   - **Append the rendered bundle**: Add `---` followed by the full rendered `olm.bundle` content at the end of the file
+   - **Append the rendered bundle**: 
+     - **CRITICAL**: Check if the file already ends with `---` on its own line
+     - If it does NOT end with `---`, add `---` on a new line
+     - If it DOES end with `---`, do NOT add another `---` (to prevent duplicate separators)
+     - Then append the full rendered `olm.bundle` content
 
 ### Step 7: Validate
 
@@ -79,6 +83,7 @@ Report any validation errors. If validation passes, summarize what was done.
 ## Important notes
 
 - Each document in `catalog.yaml` is separated by `---` on its own line
+- **NEVER create consecutive `---` separators** — always check the end of the file before adding a separator
 - The `olm.channel` entry uses the channel name from the existing catalog (usually `stable` or `preview`), not a hardcoded value
 - The rendered bundle output from `opm render` is the complete `olm.bundle` document — use it as-is, do not modify its contents
 - When adding to the channel entries list, maintain the existing order (oldest first) and add the new entry at the end

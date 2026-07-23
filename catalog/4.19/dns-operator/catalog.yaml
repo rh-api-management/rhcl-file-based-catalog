@@ -1051,7 +1051,6 @@ relatedImages:
     name: ""
 schema: olm.bundle
 ---
----
 image: registry.redhat.io/rhcl-1/dns-operator-bundle@sha256:d967a3865d196856b88cf23a8468decefb13312c256b7436fc2acc503c888cbb
 name: dns-operator.v1.4.1
 package: dns-operator
