@@ -617,7 +617,6 @@ relatedImages:
     name: limitador
 schema: olm.bundle
 ---
----
 image: registry.redhat.io/rhcl-1/limitador-operator-bundle@sha256:416895351e21b9f5dbfa6ba6b44287a38a5ded3f0782e508268160bb3140b6d2
 name: limitador-operator.v1.3.2
 package: limitador-operator

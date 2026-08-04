@@ -5044,7 +5044,6 @@ relatedImages:
   name: authorino
 schema: olm.bundle
 ---
----
 image: registry.redhat.io/rhcl-1/authorino-operator-bundle@sha256:aa88111452a385c56ea221fe9d20e44723613e1a967eb641d9e07b89acb87c6d
 name: authorino-operator.v1.3.3
 package: authorino-operator
