@@ -8,15 +8,14 @@ schema: olm.package
 ---
 entries:
   - name: dns-operator.v1.3.0
-  - name: dns-operator.v1.4.1
-    replaces: dns-operator.v1.3.2
-    skips:
-    - dns-operator.v1.4.0
   - name: dns-operator.v1.3.1
     replaces: dns-operator.v1.3.0
   - name: dns-operator.v1.3.2
     replaces: dns-operator.v1.3.1
   - name: dns-operator.v1.4.0
+    replaces: dns-operator.v1.3.2
+  - name: dns-operator.v1.4.1
+    replaces: dns-operator.v1.4.0
 name: stable
 package: dns-operator
 schema: olm.channel

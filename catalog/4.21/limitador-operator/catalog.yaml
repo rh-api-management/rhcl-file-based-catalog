@@ -13,10 +13,9 @@ entries:
   - name: limitador-operator.v1.3.2
     replaces: limitador-operator.v1.3.1
   - name: limitador-operator.v1.4.0
-  - name: limitador-operator.v1.4.1
     replaces: limitador-operator.v1.3.2
-    skips:
-    - limitador-operator.v1.4.0
+  - name: limitador-operator.v1.4.1
+    replaces: limitador-operator.v1.4.0
 name: stable
 package: limitador-operator
 schema: olm.channel
