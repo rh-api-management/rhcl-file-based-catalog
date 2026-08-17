@@ -35,7 +35,6 @@ entries:
   - name: authorino-operator.v1.3.3
     replaces: authorino-operator.v1.3.2
   - name: authorino-operator.v1.4.0
-    replaces: authorino-operator.v1.3.2
   - name: authorino-operator.v1.4.1
     replaces: authorino-operator.v1.3.3
     skips:
