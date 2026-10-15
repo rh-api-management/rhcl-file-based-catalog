@@ -45,6 +45,8 @@ entries:
     replaces: authorino-operator.v1.4.1
   - name: authorino-operator.v1.4.3
     replaces: authorino-operator.v1.4.2
+  - name: authorino-operator.v1.4.4
+    replaces: authorino-operator.v1.4.3
 name: stable
 package: authorino-operator
 schema: olm.channel
@@ -4938,5 +4940,162 @@ relatedImages:
 - image: registry.redhat.io/rhcl-1/authorino-rhel9-operator@sha256:8a8cc5fb104032c23096f3c9cf2fbc3636d343ee7ee7974e51fe1f10d3a57589
   name: ""
 - image: registry.redhat.io/rhcl-1/authorino-rhel9@sha256:c4a5a8f911a5097293de58dde320e9b8e51783b8fd92121de73bc60f6672cdf0
+  name: authorino
+schema: olm.bundle
+---
+image: registry.redhat.io/rhcl-1/authorino-operator-bundle@sha256:c23eb6b1ce2131ced2655a8f5ba700327dad8d76f50a246322098e6fb519fc7a
+name: authorino-operator.v1.4.4
+package: authorino-operator
+properties:
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta2
+- type: olm.gvk
+  value:
+    group: authorino.kuadrant.io
+    kind: AuthConfig
+    version: v1beta3
+- type: olm.gvk
+  value:
+    group: operator.authorino.kuadrant.io
+    kind: Authorino
+    version: v1beta1
+- type: olm.package
+  value:
+    packageName: authorino-operator
+    version: 1.4.4
+- type: olm.csv.metadata
+  value:
+    annotations:
+      alm-examples: |-
+        [
+          {
+            "apiVersion": "authorino.kuadrant.io/v1beta3",
+            "kind": "AuthConfig",
+            "metadata": {
+              "name": "my-api-protection"
+            },
+            "spec": {
+              "authentication": {
+                "api-key-users": {
+                  "apiKey": {
+                    "selector": {
+                      "matchLabels": {
+                        "group": "friends"
+                      }
+                    }
+                  },
+                  "credentials": {
+                    "authorizationHeader": {
+                      "prefix": "APIKEY"
+                    }
+                  }
+                }
+              },
+              "hosts": [
+                "my-api.io"
+              ]
+            }
+          },
+          {
+            "apiVersion": "operator.authorino.kuadrant.io/v1beta1",
+            "kind": "Authorino",
+            "metadata": {
+              "name": "authorino-sample"
+            },
+            "spec": {
+              "listener": {
+                "tls": {
+                  "enabled": false
+                }
+              },
+              "oidcServer": {
+                "tls": {
+                  "enabled": false
+                }
+              }
+            }
+          }
+        ]
+      capabilities: Basic Install
+      categories: Integration & Delivery
+      containerImage: registry.redhat.io/rhcl-1/authorino-rhel9-operator@sha256:0cb8718b1d8d284fa887542fee239fab184db6bdb051418295eb92a1d330da7d
+      createdAt: "2026-09-25T13:47:53Z"
+      features.operators.openshift.io/cnf: "false"
+      features.operators.openshift.io/cni: "false"
+      features.operators.openshift.io/csi: "false"
+      features.operators.openshift.io/disconnected: "true"
+      features.operators.openshift.io/fips-compliant: "true"
+      features.operators.openshift.io/proxy-aware: "false"
+      features.operators.openshift.io/tls-profiles: "false"
+      features.operators.openshift.io/token-auth-aws: "false"
+      features.operators.openshift.io/token-auth-azure: "false"
+      features.operators.openshift.io/token-auth-gcp: "false"
+      operators.openshift.io/valid-subscription: '["Red Hat Connectivity Link"]'
+      operators.operatorframework.io/builder: operator-sdk-v1.32.0
+      operators.operatorframework.io/project_layout: go.kubebuilder.io/v3
+      repository: https://github.com/Kuadrant/authorino-operator
+      support: kuadrant
+    apiServiceDefinitions: {}
+    crdDescriptions:
+      owned:
+      - description: API to describe the desired protection for a service
+        displayName: AuthConfig
+        kind: AuthConfig
+        name: authconfigs.authorino.kuadrant.io
+        version: v1beta3
+      - description: API to create instances of authorino
+        displayName: Authorino
+        kind: Authorino
+        name: authorinos.operator.authorino.kuadrant.io
+        version: v1beta1
+    description: Enables authentication and authorization for Gateways and applications
+      in a Gateway API network. Part of Red Hat Connectivity Link
+    displayName: Authorino Operator
+    installModes:
+    - supported: false
+      type: OwnNamespace
+    - supported: false
+      type: SingleNamespace
+    - supported: false
+      type: MultiNamespace
+    - supported: true
+      type: AllNamespaces
+    keywords:
+    - Authorino
+    - Authorino Operator
+    - Kuadrant
+    - Authorization
+    - Authentication
+    labels:
+      operatorframework.io/arch.amd64: supported
+      operatorframework.io/arch.arm64: supported
+      operatorframework.io/arch.ppc64le: supported
+      operatorframework.io/arch.s390x: supported
+      operatorframework.io/os.linux: supported
+    links:
+    - name: Authorino Operator
+      url: https://docs.redhat.com/en/documentation/red_hat_connectivity_link
+    - name: Authorino
+      url: https://github.com/Kuadrant/authorino
+    maintainers:
+    - email: dcesare@redhat.com
+      name: Didier Di Cesare
+    - email: eastizle@redhat.com
+      name: Eguzki Astiz Lezaun
+    - email: mcassola@redhat.com
+      name: Guilherme Cassolato
+    maturity: alpha
+    minKubeVersion: 1.25.0
+    provider:
+      name: Red Hat
+relatedImages:
+- image: registry.redhat.io/rhcl-1/authorino-operator-bundle@sha256:c23eb6b1ce2131ced2655a8f5ba700327dad8d76f50a246322098e6fb519fc7a
+  name: ""
+- image: registry.redhat.io/rhcl-1/authorino-rhel9-operator@sha256:0cb8718b1d8d284fa887542fee239fab184db6bdb051418295eb92a1d330da7d
+  name: ""
+- image: registry.redhat.io/rhcl-1/authorino-rhel9@sha256:1a5c9fa21ad7139e21818bdea42977bd340875f87ba748a297b25fcb8ca8a1a2
   name: authorino
 schema: olm.bundle
